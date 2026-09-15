@@ -1,3 +1,37 @@
-baseURL = 'https://example.org/'
-languageCode = 'en-us'
-title = 'My New Hugo Site'
+# Kursbuch Informatik — Hugo configuration
+# Theme: Relearn 6.4.1 (pinned; requires Hugo >= 0.121, local Hugo is 0.123.x)
+
+baseURL = 'https://glandl.github.io/Coursebook5-informatics/'
+title = 'Kursbuch Informatik'
+theme = 'hugo-theme-relearn'
+defaultContentLanguage = 'de'
+
+# Relearn output formats: search index, dedicated search page, print view
+[outputs]
+  home = ['html', 'rss', 'print', 'search', 'searchpage']
+  section = ['html', 'rss', 'print']
+  page = ['html', 'rss', 'print']
+
+[languages]
+  [languages.de]
+    languageCode = 'de-AT'
+    languageName = 'Deutsch'
+    title = 'Kursbuch Informatik'
+    weight = 1
+  [languages.en]
+    languageCode = 'en'
+    languageName = 'English'
+    title = 'Coursebook Informatics'
+    weight = 2
+
+[markup]
+  [markup.highlight]
+    # CSS-class-based highlighting so Relearn theme variants can style code
+    noClasses = false
+
+[params]
+  themeVariant = ['auto', 'relearn-light', 'relearn-dark']
+  collapsibleMenu = true
+  showVisitedLinks = true
+  # breadcrumb + title separator defaults are fine; features like math/mermaid
+  # load automatically per page when their shortcodes/codefences are used
