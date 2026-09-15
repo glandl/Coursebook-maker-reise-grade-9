@@ -35,6 +35,7 @@ Rhythm per project: **Kickoff/Anforderungen → Sprints (Bauen) → Review/Präs
 ### Methods (recurring rituals, explained once in the book)
 
 - **Mandatory:** Agile-lite (Team-Kanban, Sprints, Sprint-Review = Zwischenpräsentation — also covers the „agile Methoden" competency of TB 08) and **Portfolio/Lernjournal** (feeds P5 and evidence of self-study).
+- **Lernjournal format (decided 2026-09-15):** Markdown files in a **private GitHub repository per student** (via **Classroom 50** by the Fifty Foundation, since GitHub Classroom was retired 2026-08-28; needs the org on the Team plan via GitHub Education; template repo `lernjournal-vorlage`; Plan B: self-created private repo + teacher as collaborator), one file per project week plus `selbstlernen/` and `images/`. Progress is visible continuously through commits, nothing is "handed in" at the end. Week 1 of P1 therefore contains a short Markdown + GitHub-in-the-browser introduction; local Git follows when teams share code.
 - **Optional per project:** Pair-Programming-Rotationen (Driver/Navigator), Gruppenpuzzle/Jigsaw (z. B. ein Sensortyp pro Expert:innengruppe).
 
 ## 4. Kompetenzmatrix v0.1 (draft — verify against full competency texts during build)
@@ -83,7 +84,8 @@ Rhythm per project: **Kickoff/Anforderungen → Sprints (Bauen) → Review/Präs
 | Languages | Bilingual, **German leads, English full mirror** (Hugo multilingual, language switcher) |
 | German style | Doppelpunkt: **Schüler:innen**; students addressed as „du" in instructions |
 | Must-have content features | Syntax-highlighted code snippets, YouTube embeds (built-in shortcode), resource links, **tabbed code blocks per platform**, callouts, search, print/offline view |
-| Programming spine | **Python everywhere** (PC: Python/Thonny; Boards: MicroPython) |
+| Programming spine | **Python everywhere** (PC: Python; Boards: MicroPython) |
+| IDE | **Thonny for P1–P2** (bundled Python, portable/no-admin install, built-in MicroPython flashing/REPL for Pico & ESP32, beginner debugger, no AI autocomplete). **VS Code from P3** (notebooks/pandas/SQL in P3–P4, HTML/CSS/JS + Git in P5). Decided 2026-09-15. |
 | Hardware | micro:bit, Raspberry Pi/Pico, Arduino, ESP32 — **all equal, student choice**; per-platform instructions as tabs. Arduino-UNO fallback: Wokwi simulator / ESP32, C++ appendix if needed |
 | Student devices | School PCs (install rights) + BYOD; browser tools (Wokwi, micro:bit editor, …) as universal fallback |
 
