@@ -1,26 +1,28 @@
 # Kursbuch Informatik — Hugo configuration
-# Theme: Relearn 6.4.1 (pinned; requires Hugo >= 0.121, local Hugo is 0.123.x)
+# Theme: Relearn 9.1.x (pinned; requires Hugo >= 0.165.0)
 
 baseURL = 'https://glandl.github.io/Coursebook5-informatics/'
 title = 'Kursbuch Informatik'
 theme = 'hugo-theme-relearn'
 defaultContentLanguage = 'de'
 
-# Relearn output formats: search index, dedicated search page, print view
+# `print` activates the theme's feature to print whole chapters or leaf pages;
+# search is handled internally by the theme since 7.0.0 and no longer needs
+# dedicated output formats declared here.
 [outputs]
-  home = ['html', 'rss', 'print', 'search', 'searchpage']
+  home = ['html', 'rss', 'print']
   section = ['html', 'rss', 'print']
   page = ['html', 'rss', 'print']
 
 [languages]
   [languages.de]
-    languageCode = 'de-AT'
-    languageName = 'Deutsch'
+    locale = 'de-AT'
+    label = 'Deutsch'
     title = 'Kursbuch Informatik'
     weight = 1
   [languages.en]
-    languageCode = 'en'
-    languageName = 'English'
+    locale = 'en'
+    label = 'English'
     title = 'Coursebook Informatics'
     weight = 2
 
