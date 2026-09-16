@@ -1,7 +1,7 @@
 # Kursbuch Informatik — Hugo configuration
 # Theme: Relearn 9.1.x (pinned; requires Hugo >= 0.165.0)
 
-baseURL = 'https://glandl.github.io/Coursebook5-informatics/'
+baseURL = 'https://glandl.github.io/Coursebook-maker-reise-grade-9/'
 title = 'Kursbuch Informatik'
 theme = 'hugo-theme-relearn'
 defaultContentLanguage = 'de'
