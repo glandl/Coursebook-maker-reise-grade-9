@@ -4,6 +4,62 @@ Companion to `PLAN.md`. `PLAN.md` holds the settled design; this file tracks wha
 
 ---
 
+## 2026-09-17 · P1 „Code & Gadget" weeks 2–7 written (issue #5)
+
+**Goal:** finish the P1 exemplar: phase pages, board scaffolds, journal tasks, quiz, videos, DE + EN, and run the cost stress test.
+
+### Content written (DE + EN mirror each, `content/projekte/p1-code-gadget/`)
+
+| Week | Page | Phase | Content |
+|------|------|-------|---------|
+| 2 | `woche-02-anforderungen` | Kickoff → Sprint 1 | Python: types/`int()`/`float()`, `if`/`elif`/`else`, `while`/`for` (`thermostat.py`, `countdown.py`, `wuerfel.py`) · team + board choice table (with P2 Wi-Fi hint) · team repo `p1-gadget-<team>` · user stories + acceptance criteria + Muss/Soll/Kann → `ANFORDERUNGEN.md` · inputs→gadget→outputs Mermaid sketch · Kanban board, WIP limit, stand-up |
+| 3 | `woche-03-board` | Sprint 1 | functions (`schalter_funktionen.py`), lists + modulo (`ampel_liste.py`, `messwerte.py`) · connect board in Thonny · blink + button toggles LED with edge detection (4 platform tabs) · `main.py` autostart |
+| 4 | `woche-04-sensoren-review` | Sprint 1 → Review | **hardware layer `hardware.py`** per board (the only tabbed code from here on) · sensor + Thonny plotter, threshold · `nachtlicht_einfach.py` shows why states are needed · state diagram + flowchart (Mermaid, TB09 state-based *and* process-oriented) · **Sprint-Review 1** format |
+| 5 | `woche-05-zustandsautomat` | Sprint 2 | **state machine recipe** (`naechster_zustand` = arrows only) on PC then board · hysteresis · dict transition table (pro) · reaction game with time as event · **TB06 experiment**: vary LED/tone/fixed wait, measure, explain, accessibility question |
+| 6 | `woche-06-testen-doku` | Sprint 2 | `hardware.py` / `logik.py` / `main.py` split · `test_logik.py` on PC (one test per arrow) · `TESTS.md` device test report · code review checklist (teams swap, GitHub issues) · README template · 3-min presentation plan + Plan-B video |
+| 7 | `woche-07-review-retro` | Review & Retro | presentations with feedback cards · Start/Stop/Continue retrospective · Journalauftrag 7 with self-assessment per P1 competency · submission checklist · 8-question final quiz · outlook P2 |
+
+Each week has: goals box, minute-timed sections (100 min), Journalauftrag N, quiz, „Bis nächste Woche".
+
+### New: quiz shortcode
+
+`layouts/shortcodes/quiz.html` + `question.html`: multiple choice with instant feedback and score. Inner format: question / options (one per line) / explanation, separated by `---`; `correct="N"`. Without JavaScript and in the print view each question falls back to a collapsible solution. Build errors on a malformed question. **This is the quiz format for all later projects and Lernpfade.**
+
+### Verification
+
+- `hugo --gc` clean (DE 113 / EN 115 pages), all `relref`s resolve, no raw shortcodes in output.
+- All YouTube IDs checked via oEmbed: `Kc-JmsKLPjs`, `cSkP6rYQ3U0`, `vYnprnrTWwU`, `P513uNckJF0`, `B1mMAieycPY`, `R7lZTvC9UUU`, `DaZF-3jM69U`, `HTlIg6IqNzA`, `59S53NSHR0M`, `nwmIg0ZYnF8`, `rqTMaD4FnFA`, `3NroZHXFihE`, `rWz9VsHSpAE`. All German; EN pages label them as such.
+- Every Python snippet (DE and EN) syntax-checked. PC programs run with sample input. Board programs run against **mock** `machine`/`microbit`/`music` modules for micro:bit, Pico and ESP32 (all `hardware.py` × `sensor_test`/`nachtlicht`/`main`/`reaktion` combinations, including real reaction-game hits). **Not tested on physical boards**: pin choices (Pico GP14/15/16/26, ESP32 GPIO 4/18/19/34), PWM buzzer volume, micro:bit light-level reading while the display is lit.
+- Kompetenzmatrix: TB02 (9), TB06 (10), TB09 (9) → 🟢. TB04 stays 🟡 (network part in P2).
+- P1 brief end-product list updated (flowchart, file structure, tests).
+
+### Stress test (PLAN.md §8)
+
+- Platform tabs ≈ **10 %** of P1 DE words (1,120 of 11,384). Only weeks 1, 3, 4 have tabs. The `hardware.py` pattern keeps weeks 5–7 platform-free.
+- EN mirror = **+100 %** words (23.7k total). Every correction made during this session had to be applied twice.
+- Real cost of 4 platforms: hardware verification and teacher support, not writing.
+- Recommendation recorded in PLAN.md §8, **decision pending**.
+
+### Deliberately not done (other issues)
+
+- `werkzeuge/micropython-boards` and `wokwi-simulator` are still stubs, but weeks 3–4 link to them for drivers, pinouts, Arduino R4/Nano pin mapping (**issue #4, needed before week 3**).
+- Kanban/Sprint method page (issue #3). Week 2 explains Kanban inline for now; move it to the method page later and link back.
+- Teacher Verlaufspläne weeks 2–7 (issue #7) and rubric templates (#8), which week 7 links to.
+- Leftover empty stub `content/projekte/p1-code-und-gadget/` still exists (see previous entry).
+
+Committed and pushed to `master` at the end of this session (triggers the Pages deploy); **issue #5 closed**. The stress-test question (EN full mirror vs. partial) stays **open for decision** in PLAN.md §8.
+
+### Next steps (in order)
+
+1. Decide the stress-test question (EN full vs. partial) before P2 is written.
+2. Issue #4: MicroPython boards + Wokwi guides (week 3 depends on them).
+3. Issue #3: Kanban/Sprint method page; replace the inline Kanban section in week 2 with a link.
+4. Issue #7: Verlaufspläne weeks 2–7.
+5. Build hardware test: run weeks 3–5 code once on a real micro:bit, Pico and ESP32.
+6. Check the Mermaid diagrams in a browser on the deployed site (state diagrams and flowcharts were only verified as rendered blocks, not visually).
+
+---
+
 ## 2026-09-17 · Kompetenzmatrix published (issue #2)
 
 **Goal:** verify the v0.1 draft matrix against the full Excel wording and publish `lehrkraefte/kompetenzmatrix` (DE + EN).

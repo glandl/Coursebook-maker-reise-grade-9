@@ -20,7 +20,7 @@ Diese Seite ist der **Lehrplan-Nachweis** des Kursbuchs: Sie zeigt für jede der
 
 | Schulstufe | Sem. | Kompetenz (Lehrplan-Wortlaut) | Abgedeckt durch | Status |
 | --- | --- | --- | --- | --- |
-| 9 | WS+SS | Algorithmen in einer textbasierten Programmiersprache anhand einfacher Anwendungen umsetzen. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟡 |
+| 9 | WS+SS | Algorithmen in einer textbasierten Programmiersprache anhand einfacher Anwendungen umsetzen. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟢 |
 | 10 | WS | Algorithmen unter Verwendung geeigneter Datenstrukturen implementieren. | [Selbstlernen: Datenstrukturen]({{% relref "selbstlernen/datenstrukturen" %}}) + Praxis in P3/P4 | 🔴 |
 | 11 | SS | gegebene Programmcodes bei Bedarf verbessern/korrigieren. | [Selbstlernen: Code-Qualität & Refactoring]({{% relref "selbstlernen/code-qualitaet" %}}) + Code-Reviews in allen Projekten | 🔴 |
 | 11 | SS | Algorithmen anhand einfacher Laufzeitabschätzungen vergleichen (rekursive und nicht rekursive) sowie ein Beispiel für ein nicht berechenbares Problem benennen. | [Selbstlernen: Laufzeit & Algorithmenanalyse]({{% relref "selbstlernen/laufzeit-algorithmenanalyse" %}}) | 🔴 |
@@ -51,7 +51,7 @@ Diese Seite ist der **Lehrplan-Nachweis** des Kursbuchs: Sie zeigt für jede der
 
 | Schulstufe | Sem. | Kompetenz (Lehrplan-Wortlaut) | Abgedeckt durch | Status |
 | --- | --- | --- | --- | --- |
-| 10 | WS | einfache interaktive Systeme bauen sowie deren Systemverhalten durch Variation von Eingaben und Rückmeldungen untersuchen und erklären. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟡 |
+| 10 | WS | einfache interaktive Systeme bauen sowie deren Systemverhalten durch Variation von Eingaben und Rückmeldungen untersuchen und erklären. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟢 |
 | 11 | WS | Interaktionsformen mit Computersystemen beschreiben und vergleichen sowie deren Nutzung für diverse Benutzergruppen begründet einordnen. | [Selbstlernen: Interaktionsformen]({{% relref "selbstlernen/interaktionsformen" %}}) | 🔴 |
 
 ## 07 Design und Entwicklung
@@ -72,7 +72,7 @@ Diese Seite ist der **Lehrplan-Nachweis** des Kursbuchs: Sie zeigt für jede der
 
 | Schulstufe | Sem. | Kompetenz (Lehrplan-Wortlaut) | Abgedeckt durch | Status |
 | --- | --- | --- | --- | --- |
-| 9 | WS+SS | reale Objekte oder Situationen zustandsbasiert und ablauforientiert abstrahieren und modellieren. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟡 |
+| 9 | WS+SS | reale Objekte oder Situationen zustandsbasiert und ablauforientiert abstrahieren und modellieren. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟢 |
 
 ## 10 Privatsphäre, Sicherheit und Schutz
 

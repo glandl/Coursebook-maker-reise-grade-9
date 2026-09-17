@@ -20,8 +20,8 @@ Examples of gadgets teams have built or could build:
 ## The end product
 
 1. A **working gadget** on micro:bit, Raspberry Pi Pico, ESP32 or Arduino (your choice, see [MicroPython Boards]({{% relref "werkzeuge/micropython-boards" %}})).
-2. A **state diagram** of your gadget (which states exist, what triggers transitions).
-3. The **source code** with comments, in the team repository.
+2. A **state diagram** of your gadget (which states exist, what triggers transitions) and a **flowchart** of the main loop.
+3. The **source code** with comments and tests, in the team repository: `hardware.py` (board-specific), `logic.py` (testable on the PC), `main.py`, plus `README.md`, `REQUIREMENTS.md` and `TESTS.md`.
 4. A **3-minute presentation** at the review in week 7.
 5. Your **learning journal entries** (at least one per week).
 

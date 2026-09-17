@@ -1,0 +1,71 @@
+{{- /*
+  Self-check quiz with immediate feedback. Wraps one or more `question` shortcodes.
+
+  {{< quiz title="Quiz · Woche 2" >}}
+  {{< question correct="2" >}}
+  Was gibt `print(7 // 2)` aus?
+  ---
+  3.5
+  3
+  ---
+  `//` ist die ganzzahlige Division.
+  {{< /question >}}
+  {{< /quiz >}}
+
+  Without JavaScript (and in the print view) every question still shows a
+  collapsible solution, so the quiz degrades to the expand-style self-check.
+*/ -}}
+{{- $de := eq .Page.Language.Lang "de" -}}
+{{- $title := .Get "title" | default (cond $de "Quiz" "Quiz") -}}
+<div class="quiz" data-label-score="{{ cond $de "richtig" "correct" }}">
+  <div class="quiz-title">{{ $title | .Page.RenderString }}</div>
+  {{ .Inner }}
+  <div class="quiz-score" aria-live="polite"></div>
+</div>
+<style>
+.quiz{border:1px solid var(--INTERNAL-MAIN-TOPBAR-BORDER-color,#ccc);border-radius:.5rem;padding:.75rem 1rem 1rem;margin:1.5rem 0}
+.quiz-title{font-weight:700;font-size:1.1em;margin-bottom:.5rem}
+.quiz-question{margin:1rem 0 0}
+.quiz-q>strong{float:left;margin-right:.35rem}
+.quiz-q p{margin:0 0 .35rem}
+.quiz-options{list-style:none;padding:0;margin:.5rem 0;display:grid;gap:.35rem}
+.quiz-options li{margin:0}
+.quiz-option{width:100%;text-align:left;font:inherit;color:inherit;background:transparent;border:1px solid var(--INTERNAL-MAIN-TOPBAR-BORDER-color,#ccc);border-radius:.35rem;padding:.4rem .6rem;cursor:pointer}
+.quiz-option:hover:not([disabled]){border-color:var(--INTERNAL-MAIN-LINK-color,#1d70b8)}
+.quiz-option[disabled]{cursor:default}
+.quiz-option.is-correct{border-color:#2e7d32;background:rgba(46,125,50,.15)}
+.quiz-option.is-wrong{border-color:#c62828;background:rgba(198,40,40,.15)}
+.quiz-solution summary{cursor:pointer;font-size:.9em;opacity:.8}
+.quiz-score{margin-top:1rem;font-weight:700}
+.quiz-score:empty{display:none}
+</style>
+<script>
+(function(){
+  if (window.__quizInit) return;
+  window.__quizInit = true;
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('.quiz-option');
+    if (!btn) return;
+    var q = btn.closest('.quiz-question');
+    if (q.dataset.answered) return;
+    q.dataset.answered = '1';
+    var correct = q.dataset.correct;
+    var ok = btn.dataset.index === correct;
+    q.dataset.result = ok ? 'ok' : 'wrong';
+    q.querySelectorAll('.quiz-option').forEach(function(b){
+      b.disabled = true;
+      if (b.dataset.index === correct) b.classList.add('is-correct');
+    });
+    if (!ok) btn.classList.add('is-wrong');
+    var sol = q.querySelector('.quiz-solution');
+    if (sol) sol.open = true;
+    var quiz = q.closest('.quiz');
+    var all = quiz.querySelectorAll('.quiz-question');
+    var done = quiz.querySelectorAll('.quiz-question[data-answered]');
+    if (all.length === done.length) {
+      var right = quiz.querySelectorAll('.quiz-question[data-result="ok"]').length;
+      quiz.querySelector('.quiz-score').textContent = right + ' / ' + all.length + ' ' + quiz.dataset.labelScore;
+    }
+  });
+})();
+</script>

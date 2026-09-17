@@ -22,7 +22,7 @@ This page is the coursebook's **curriculum evidence**: for each of the **27 comp
 
 | Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
 | --- | --- | --- | --- | --- |
-| 9 | WS+SS | implement algorithms in a text-based programming language for simple applications. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟡 |
+| 9 | WS+SS | implement algorithms in a text-based programming language for simple applications. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟢 |
 | 10 | WS | implement algorithms using suitable data structures. | [Self-study: Data Structures]({{% relref "selbstlernen/datenstrukturen" %}}) + practice in P3/P4 | 🔴 |
 | 11 | SS | improve/correct given program code where needed. | [Self-study: Code Quality & Refactoring]({{% relref "selbstlernen/code-qualitaet" %}}) + code reviews in all projects | 🔴 |
 | 11 | SS | compare algorithms using simple runtime estimates (recursive and non-recursive) and name an example of a non-computable problem. | [Self-study: Runtime & Algorithm Analysis]({{% relref "selbstlernen/laufzeit-algorithmenanalyse" %}}) | 🔴 |
@@ -53,7 +53,7 @@ This page is the coursebook's **curriculum evidence**: for each of the **27 comp
 
 | Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
 | --- | --- | --- | --- | --- |
-| 10 | WS | build simple interactive systems and examine and explain their system behavior by varying inputs and feedback. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟡 |
+| 10 | WS | build simple interactive systems and examine and explain their system behavior by varying inputs and feedback. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟢 |
 | 11 | WS | describe and compare forms of interaction with computer systems and give reasoned judgment on their use for diverse user groups. | [Self-study: Forms of Interaction]({{% relref "selbstlernen/interaktionsformen" %}}) | 🔴 |
 
 ## 07 Design and Development
@@ -74,7 +74,7 @@ This page is the coursebook's **curriculum evidence**: for each of the **27 comp
 
 | Grade | Sem. | Competency (curriculum wording, translated) | Covered by | Status |
 | --- | --- | --- | --- | --- |
-| 9 | WS+SS | abstract and model real objects or situations in a state-based and process-oriented way. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟡 |
+| 9 | WS+SS | abstract and model real objects or situations in a state-based and process-oriented way. | [P1 Code & Gadget]({{% relref "projekte/p1-code-gadget" %}}) | 🟢 |
 
 ## 10 Privacy, Security and Protection
 

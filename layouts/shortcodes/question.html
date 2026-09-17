@@ -1,0 +1,36 @@
+{{- /*
+  One multiple-choice question inside a `quiz` shortcode. The inner content has
+  three parts separated by a line containing only `---`:
+    1. question (Markdown)
+    2. answer options, one per line (inline Markdown)
+    3. explanation (Markdown, optional)
+  `correct` is the 1-based number of the right option.
+*/ -}}
+{{- $de := eq .Page.Language.Lang "de" -}}
+{{- $parts := split (replace (strings.TrimSpace .Inner) "\r\n" "\n") "\n---\n" -}}
+{{- if lt (len $parts) 2 -}}
+  {{- errorf "question shortcode in %s needs a question and options separated by '---'" .Position -}}
+{{- end -}}
+{{- $correct := .Get "correct" | default "1" -}}
+{{- $options := slice -}}
+{{- range split (strings.TrimSpace (index $parts 1)) "\n" -}}
+  {{- with strings.TrimSpace . -}}{{- $options = $options | append . -}}{{- end -}}
+{{- end -}}
+{{- if or (lt (int $correct) 1) (gt (int $correct) (len $options)) -}}
+  {{- errorf "question shortcode in %s: correct=%q is out of range" .Position $correct -}}
+{{- end -}}
+<div class="quiz-question" data-correct="{{ $correct }}">
+  <div class="quiz-q"><strong>{{ add .Ordinal 1 }}.</strong> {{ index $parts 0 | .Page.RenderString (dict "display" "block") }}</div>
+  <ol class="quiz-options">
+    {{- range $i, $o := $options }}
+    <li><button type="button" class="quiz-option" data-index="{{ add $i 1 }}">{{ printf "%c)" (add 97 $i) }} {{ $o | $.Page.RenderString }}</button></li>
+    {{- end }}
+  </ol>
+  <details class="quiz-solution">
+    <summary>{{ cond $de "Lösung" "Solution" }}</summary>
+    <p><strong>{{ cond $de "Richtig" "Correct" }}: {{ printf "%c)" (add 96 (int $correct)) }}</strong></p>
+    {{- if ge (len $parts) 3 }}
+    {{ index $parts 2 | .Page.RenderString (dict "display" "block") }}
+    {{- end }}
+  </details>
+</div>

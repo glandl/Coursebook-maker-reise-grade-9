@@ -108,12 +108,14 @@ Teacher section is **public** (deliberate decision), just a separate menu branch
 
 1. **Skeleton:** Hugo + Relearn, DE/EN multilingual config, GitHub Actions → GitHub Pages, full navigation with stub pages. ✅ done, site live at https://glandl.github.io/Coursebook-maker-reise-grade-9/
 2. **Kompetenzmatrix** page (from §4, verified against the full Excel texts). ✅ done 2026-09-17, see `lehrkraefte/kompetenzmatrix`
-3. **P1 „Code & Gadget" fully written** — the exemplar that defines the format (phases, scaffolds, platform tabs, journal tasks, quiz). 🟡 in progress: brief + week 1 done, weeks 2–7 open
+3. **P1 „Code & Gadget" fully written** — the exemplar that defines the format (phases, scaffolds, platform tabs, journal tasks, quiz). 🟢 student pages done 2026-09-17 (weeks 1–7, DE + EN, issue #5). Still open outside #5: board setup guide (#4), Kanban method page (#3), teacher lesson plans weeks 2–7 (#7), classroom test on real hardware
 4. **One-page briefs for P2–P5** so the whole year is visible from day one.
 5. Then project by project: P2 → P3 → P4 → P5 + matching Selbstlern-Lernpfade, validated in class as the year progresses.
 
 ## 8. Known risks
 
 - **Cost multiplier:** „all 4 platforms equal" × „EN full mirror" multiplies writing effort. P1 is the stress test — if too heavy, downgrade to *one primary platform + extension tabs* and/or *EN partial* (both cheap to change after the exemplar).
+  - **Stress test result (P1, 2026-09-17):** platform tabs are only **~10 %** of P1's words (weeks 1, 3, 4; weeks 5–7 have none), because from week 4 all board-specific code lives in one `hardware.py` per board and the gadget code is shared. The Arduino tab has already become a pointer (UNO R4/Nano ESP32 → ESP32 code, UNO R3 → Wokwi). The **EN mirror is the real multiplier: +100 %** of words (DE 11.4k → DE+EN 23.7k), and every later correction has to be made twice. The hidden cost of 4 platforms is not text but **verification and classroom support**: the board code was only tested against mock modules, not on real hardware, and the teacher has to support 3–4 wiring setups.
+  - **Recommendation (decision pending):** keep all 4 platforms, with the rule "tabs only for `hardware.py` and first contact; Arduino = pointer tab". For EN, decide between keeping the full mirror and *EN partial* (briefs, tool guides and Kompetenzmatrix in EN, week pages DE only).
 - **Defensibility depends on the matrix:** resolved — the full-text matrix (§4 v1.0, published at `lehrkraefte/kompetenzmatrix`) is verified against the Excel wording.
 - **Sequential compression trap:** resist drifting back into teaching 9./10./11. content in sequence; the projects must genuinely merge the spiral.
