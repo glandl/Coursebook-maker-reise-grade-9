@@ -4,6 +4,30 @@ Companion to `PLAN.md`. `PLAN.md` holds the settled design; this file tracks wha
 
 ---
 
+## 2026-09-17 · Kompetenzmatrix published (issue #2)
+
+**Goal:** verify the v0.1 draft matrix against the full Excel wording and publish `lehrkraefte/kompetenzmatrix` (DE + EN).
+
+- Local `master` was 2 commits behind `origin/master` (the Pages deploy workflow had been fixed and pushed directly on GitHub on 2026-09-16, switching to a `gh-pages`-branch build; site is live and green at https://glandl.github.io/Coursebook-maker-reise-grade-9/). Fast-forwarded to sync. Issue #1 is functionally done but still open on GitHub — not closed yet, pending confirmation.
+- Extracted all cell text from `planning/LP-Informatik-Sek2-v1.3-nachBegutachtung.xlsx`, sheet `PF-NachBegutachtung-V1` (sheet 2), by parsing the OOXML directly (no `openpyxl` available locally). Full extraction confirms **27 competencies** (9 per grade 9/10/11 by actual row count; the sheet's own header claims 9/9/8).
+- Corrections found versus the v0.1 draft: **TB04** grade was 9–11 → actually **10 only**; **TB06** was 9/10 → actually **10/11**; **TB07** was 9–11 → actually **10 only**; **TB09** was 9–11 → actually **9 only**; **TB05** 2nd competency was 10/11 → actually **11 only**; **TB02** "Laufzeitabschätzungen" was listed as grade 10 → actually **11** (same column as "Programmcode verbessern/korrigieren", both grade 11). **TB11** previously merged two different competencies (grade-9 "Berufsfelder der Informatik" and grade-11 "ethisch/inklusive Systemgestaltung") into a single grade-11 row — split into two correct rows.
+- Also found: **Themenbereich 04 has no title** in the source document (row is blank), only its competency text is filled in.
+- Published `content/lehrkraefte/kompetenzmatrix.de.md` and `.en.md`: curriculum wording (footnote reference numbers like ".6, 7, 9, 13" stripped for public readability — see notes file), grade/semester, covered-by (P1–P5 / Selbstlernen link), status icon (🟡/🔴) per row, plus a coverage-count summary table (P1: 4, P2: 3, P3: 5, P4: 4, P5: 5, Selbstlernen: 6 = 27). TB04 (no title in the source) is published under the working title **"Computersysteme" / "Computer Systems"**. The source is referred to on public pages as **"Lehrplan für Informatik und KI"**, never by the xlsx filename.
+- Source-verification detail (row-count discrepancy, grade corrections, TB02/TB11 merge fix, footnote-number handling, full raw extraction) moved to a new **`planning/KOMPETENZMATRIX-NOTES.md`** — internal only, not published on the site.
+- Backfilled the corrected mapping into `planning/PLAN.md` §4 (bumped to v1.0), and marked roadmap steps 1–2 done in §7.
+- `hugo --gc` build is clean (95 DE / 97 EN pages), all `relref` links in the new page resolve.
+- **Not yet done:** committing/pushing this change, and closing issue #2 on GitHub — both need explicit confirmation first.
+
+### Next steps (in order)
+
+1. Commit + push the Kompetenzmatrix + PLAN.md v1.0 changes; close issue #2 once the user confirms.
+2. Decide fate of the leftover empty stub `content/projekte/p1-code-und-gadget/` (duplicate of `p1-code-gadget`, unused, never linked) — looks like dead content from an early naming decision.
+3. Week 2 student page + Verlaufsplan: team & board choice, requirements, Kanban page (issue #3).
+4. Continue P1 weeks 2–7 (issue #5) to finish the exemplar project format.
+5. One-page briefs P2–P5 (issue #6).
+
+---
+
 ## 2026-09-15 · Session 1 materials (P1 Kickoff) built
 
 **Goal of the day:** everything needed to teach the first double lesson (100 min net) of P1 „Code & Gadget".

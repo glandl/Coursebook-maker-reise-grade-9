@@ -7,7 +7,7 @@
 
 ## 1. Source of truth
 
-- **Only** sheet `PF-NachBegutachtung-V1` (sheet 2) of `planning/LP-Informatik-Sek2-v1.3-nachBegutachtung.xlsx` is authoritative: **11 Themenbereiche, ~26 competencies**.
+- **Only** sheet `PF-NachBegutachtung-V1` (sheet 2) of `planning/LP-Informatik-Sek2-v1.3-nachBegutachtung.xlsx` is authoritative: **11 Themenbereiche, 27 competencies** (9 per grade 9/10/11; the sheet's own header says 9/9/8, the actual row count is 9/9/9 — verified 2026-09-17, see issue #2).
 - Sheet 1 is marked outdated — never use it (background reference at most).
 - Coverage must be **formally defensible**: every competency is traceably mapped to a project or a self-study path in a **Kompetenzmatrix** (published in the Lehrkräfte section).
 
@@ -38,36 +38,39 @@ Rhythm per project: **Kickoff/Anforderungen → Sprints (Bauen) → Review/Präs
 - **Lernjournal format (decided 2026-09-15):** Markdown files in a **private GitHub repository per student** (via **Classroom 50** by the Fifty Foundation, since GitHub Classroom was retired 2026-08-28; needs the org on the Team plan via GitHub Education; template repo `lernjournal-vorlage`; Plan B: self-created private repo + teacher as collaborator), one file per project week plus `selbstlernen/` and `images/`. Progress is visible continuously through commits, nothing is "handed in" at the end. Week 1 of P1 therefore contains a short Markdown + GitHub-in-the-browser introduction; local Git follows when teams share code.
 - **Optional per project:** Pair-Programming-Rotationen (Driver/Navigator), Gruppenpuzzle/Jigsaw (z. B. ein Sensortyp pro Expert:innengruppe).
 
-## 4. Kompetenzmatrix v0.1 (draft — verify against full competency texts during build)
+## 4. Kompetenzmatrix v1.0 (verified against full Excel wording 2026-09-15/17, issue #2; full text published at `lehrkraefte/kompetenzmatrix`)
+
+27 competencies (9 per grade 9/10/11 by row count — the sheet's own header says 9/9/8, see issue #2 finding). Corrected vs. the earlier v0.1 draft: **TB04** (was 9–11, is **10**), **TB06** (was 9/10, is **10/11**), **TB07** (was 9–11, is **10**), **TB09** (was 9–11, is **9**), **TB05** 2nd row (was 10/11, is **11**), **TB02** "Laufzeitabschätzungen" (was 10, is **11**), **TB11** split into two 9th-grade rows (Nachhaltigkeit and Berufsfelder, previously merged into one row).
 
 | TB | Competency (short) | Grade col. | Covered by |
 |----|--------------------|------------|-----------|
 | 01 | Weg der Daten: Erfassung → Analyse untersuchen | 9 | **P2** |
-| 01 | Datenmodellierung, Abfragen, Daten aus Beständen gewinnen (SQL) | 10/11 | **P4** (Daten für ML auch in P3) |
+| 01 | Datenmodellierung, Abfragen, Daten aus Beständen gewinnen (SQL) | 10 | **P4** (Daten für ML auch in P3) |
 | 02 | Algorithmen in textbasierter Sprache umsetzen | 9 | **P1** |
 | 02 | Algorithmen mit geeigneten Datenstrukturen implementieren | 10 | **Selbstlernen** + Praxis in P3/P4 |
-| 02 | Laufzeitabschätzungen, rekursiv/iterativ vergleichen | 10 | **Selbstlernen** |
 | 02 | Programmcode analysieren, verbessern/korrigieren | 11 | **Selbstlernen** + Code-Reviews in allen Projekten |
+| 02 | Laufzeitabschätzungen, rekursiv/iterativ vergleichen | 11 | **Selbstlernen** |
 | 03 | Einfache KI-Modelle (Entscheidungsbäume, Klassifikation) erstellen/bewerten | 9 | **P3** |
 | 03 | ML-Verfahren (Perzeptron, unüberwacht) schrittweise nachvollziehen | 10 | **P3** |
 | 03 | Neuronale Netze & generative KI erklären, Auswirkungen | 11 | **P3** |
 | 03 | KI-Anwendungsbereiche vergleichen, Verfahren begründen | 11 | **P3** |
-| 04 | Rechnersysteme mit Peripherie, Sensoren/Aktoren, Netzwerkkonfiguration in Betrieb nehmen | 9–11 | **P1** (Gerät) + **P2** (Netzwerk) |
+| 04 | Rechnersysteme mit Peripherie, Sensoren/Aktoren, Netzwerkkonfiguration in Betrieb nehmen | 10 | **P1** (Gerät) + **P2** (Netzwerk) |
 | 05 | Lokale Netzwerke, einfache Protokolle, Gerät einbinden | 9 | **P2** |
-| 05 | Stufenmodell, netzbasierte Dienste, zustandslos/verbindungsorientiert | 10/11 | **P5** (Vertiefung: Selbstlernen) |
-| 06 | Einfache interaktive Systeme bauen, Systemverhalten variieren | 9 | **P1** |
-| 06 | Interaktionsformen beschreiben und vergleichen | 10 | **Selbstlernen** |
-| 07 | Anforderungen in natürlicher Sprache und semi-formal formulieren | 9–11 | **P5** (geübt ab P1-Kickoff) |
+| 05 | Stufenmodell, netzbasierte Dienste, zustandslos/verbindungsorientiert | 11 | **P5** (Vertiefung: Selbstlernen) |
+| 06 | Einfache interaktive Systeme bauen, Systemverhalten variieren | 10 | **P1** |
+| 06 | Interaktionsformen beschreiben und vergleichen | 11 | **Selbstlernen** |
+| 07 | Anforderungen in natürlicher Sprache und einfachen grafischen Notationen nachvollziehen | 10 | **P5** (geübt ab P1-Kickoff) |
 | 08 | Digitale Artefakte: Form/Inhalt-Trennung, geistiges Eigentum, CC | 9 | **P5** (Journal ab P1) |
 | 08 | Multimediale Artefakte, Inklusion, Prinzipien begründen | 10 | **P5** |
 | 08 | Webbasierte Anwendungen, client-/serverseitig, agile Methoden | 11 | **P5** |
-| 09 | Zustandsbasiert und ablauforientiert abstrahieren/modellieren | 9–11 | **P1** |
+| 09 | Zustandsbasiert und ablauforientiert abstrahieren/modellieren | 9 | **P1** |
 | 10 | Sphären der Privatheit, DSGVO, eigenes Verhalten begründen | 9 | **P4** |
 | 10 | Symmetrische/asymmetrische Verschlüsselung, Authentifizierung | 10 | **P4** |
 | 10 | OSINT, Datenfußabdruck | 11 | **P4** |
 | 11 | Energie-/Ressourcenverbrauch, nachhaltige Gestaltung | 9 | **P2** |
+| 11 | Berufsfelder der Informatik | 9 | **Selbstlernen** |
 | 11 | Digitale Infrastrukturen, Teilhabe, EU-Gesetzgebung zu KI | 10 | **P3** |
-| 11 | Ethisch/inklusive Systemgestaltung; Berufsfelder der Informatik | 11 | **Selbstlernen** + Reflexion in P3/P5 |
+| 11 | Ethisch/inklusive Systemgestaltung | 11 | **Selbstlernen** + Reflexion in P3/P5 |
 
 **Selbstlern-Lernpfade (initial set):** Datenstrukturen · Laufzeit & Algorithmenanalyse · Code-Qualität/Refactoring · Interaktionsformen (MMI) · Stufenmodell-Vertiefung · Berufsfelder & Ethik.
 
@@ -103,14 +106,14 @@ Teacher section is **public** (deliberate decision), just a separate menu branch
 
 ## 7. Build roadmap
 
-1. **Skeleton:** Hugo + Relearn, DE/EN multilingual config, GitHub Actions → GitHub Pages, full navigation with stub pages.
-2. **Kompetenzmatrix** page (from §4, verified against the full Excel texts).
-3. **P1 „Code & Gadget" fully written** — the exemplar that defines the format (phases, scaffolds, platform tabs, journal tasks, quiz).
+1. **Skeleton:** Hugo + Relearn, DE/EN multilingual config, GitHub Actions → GitHub Pages, full navigation with stub pages. ✅ done, site live at https://glandl.github.io/Coursebook-maker-reise-grade-9/
+2. **Kompetenzmatrix** page (from §4, verified against the full Excel texts). ✅ done 2026-09-17, see `lehrkraefte/kompetenzmatrix`
+3. **P1 „Code & Gadget" fully written** — the exemplar that defines the format (phases, scaffolds, platform tabs, journal tasks, quiz). 🟡 in progress: brief + week 1 done, weeks 2–7 open
 4. **One-page briefs for P2–P5** so the whole year is visible from day one.
 5. Then project by project: P2 → P3 → P4 → P5 + matching Selbstlern-Lernpfade, validated in class as the year progresses.
 
 ## 8. Known risks
 
 - **Cost multiplier:** „all 4 platforms equal" × „EN full mirror" multiplies writing effort. P1 is the stress test — if too heavy, downgrade to *one primary platform + extension tabs* and/or *EN partial* (both cheap to change after the exemplar).
-- **Defensibility depends on the matrix:** the v0.1 mapping above uses abbreviated competency texts; verify each row against the full Excel wording during step 2.
+- **Defensibility depends on the matrix:** resolved — the full-text matrix (§4 v1.0, published at `lehrkraefte/kompetenzmatrix`) is verified against the Excel wording.
 - **Sequential compression trap:** resist drifting back into teaching 9./10./11. content in sequence; the projects must genuinely merge the spiral.
