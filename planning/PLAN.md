@@ -23,7 +23,7 @@
 ## 3. The year: „Maker-Reise" (5 projects)
 
 | # | Project | Duration | Themenbereiche (primary) | Idea |
-|---|---------|----------|--------------------------|------|
+| --- | --------- | ---------- | -------------------------- | ------ |
 | P1 | **Code & Gadget** | ~7 weeks | TB 02, 04, 06, 09 | Python-Grundlagen; ein interaktives Gerät am Einplatinenrechner bauen (Zustandsautomat, Sensoren/Aktoren, Peripherie) |
 | P2 | **Wetterstation / IoT** | ~7 weeks | TB 04, 05, 01, 11 | Sensoren vernetzen, Daten erfassen → speichern → analysieren; Netzwerkgrundlagen; Energie & Nachhaltigkeit |
 | P3 | **KI-Labor** | ~7 weeks | TB 03, 01, 11 | Entscheidungsbäume, Perzeptron/ML-Verfahren, neuronale Netze, generative KI; EU AI Act, gesellschaftliche Teilhabe |
@@ -43,7 +43,7 @@ Rhythm per project: **Kickoff/Anforderungen → Sprints (Bauen) → Review/Präs
 27 competencies (9 per grade 9/10/11 by row count — the sheet's own header says 9/9/8, see issue #2 finding). Corrected vs. the earlier v0.1 draft: **TB04** (was 9–11, is **10**), **TB06** (was 9/10, is **10/11**), **TB07** (was 9–11, is **10**), **TB09** (was 9–11, is **9**), **TB05** 2nd row (was 10/11, is **11**), **TB02** "Laufzeitabschätzungen" (was 10, is **11**), **TB11** split into two 9th-grade rows (Nachhaltigkeit and Berufsfelder, previously merged into one row).
 
 | TB | Competency (short) | Grade col. | Covered by |
-|----|--------------------|------------|-----------|
+| ---- | -------------------- | ------------ | ----------- |
 | 01 | Weg der Daten: Erfassung → Analyse untersuchen | 9 | **P2** |
 | 01 | Datenmodellierung, Abfragen, Daten aus Beständen gewinnen (SQL) | 10 | **P4** (Daten für ML auch in P3) |
 | 02 | Algorithmen in textbasierter Sprache umsetzen | 9 | **P1** |
@@ -81,7 +81,7 @@ Rhythm per project: **Kickoff/Anforderungen → Sprints (Bauen) → Review/Präs
 ## 6. Technology & book format
 
 | Decision | Choice |
-|----------|--------|
+| ---------- | -------- |
 | Framework | Hugo + **Relearn** theme |
 | Hosting | **GitHub Pages** via GitHub Actions |
 | Languages | Bilingual, **German leads, English full mirror** (Hugo multilingual, language switcher) |
@@ -106,7 +106,7 @@ Teacher section is **public** (deliberate decision), just a separate menu branch
 
 ## 7. Build roadmap
 
-1. **Skeleton:** Hugo + Relearn, DE/EN multilingual config, GitHub Actions → GitHub Pages, full navigation with stub pages. ✅ done, site live at https://glandl.github.io/Coursebook-maker-reise-grade-9/
+1. **Skeleton:** Hugo + Relearn, DE/EN multilingual config, GitHub Actions → GitHub Pages, full navigation with stub pages. ✅ done, site live at [https://glandl.github.io/Coursebook-maker-reise-grade-9/](https://glandl.github.io/Coursebook-maker-reise-grade-9/)
 2. **Kompetenzmatrix** page (from §4, verified against the full Excel texts). ✅ done 2026-09-17, see `lehrkraefte/kompetenzmatrix`
 3. **P1 „Code & Gadget" fully written** — the exemplar that defines the format (phases, scaffolds, platform tabs, journal tasks, quiz). 🟢 student pages done 2026-09-17 (weeks 1–7, DE + EN, issue #5). Still open outside #5: board setup guide (#4), Kanban method page (#3), teacher lesson plans weeks 2–7 (#7), classroom test on real hardware
 4. **One-page briefs for P2–P5** so the whole year is visible from day one.
