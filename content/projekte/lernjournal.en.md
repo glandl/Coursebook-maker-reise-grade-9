@@ -1,6 +1,6 @@
 +++
 title = "Learning Journal"
-weight = 1
+weight = 5
 +++
 
 The learning journal accompanies you through the whole year. It is your memory, your evidence and later the material for your web portfolio in P5. It lives as **Markdown files in your own GitHub repository**. Every entry is a commit, so your teacher sees progress continuously, not only at the end of a project.

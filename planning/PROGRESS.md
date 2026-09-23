@@ -31,15 +31,31 @@ Raised by the user after reviewing this plan: **when a break happens and how lon
 - Every P1 student page now sums to 95 min of sections; both teacher tables end at 95.
 - Recorded as a book-wide convention in PLAN.md section 6, so P2-P5 are written the same way.
 
-**Not done:** committing/pushing (needs confirmation). Issue #7 stays open, weeks 3-7 are still missing.
+### Fix: project order in the navigation
+
+P1 appeared **last** in the student navigation. Cause: `p1-code-gadget/_index` still carried `weight = 10` from the skeleton phase while P2-P5 had been given 2-5, so P1 sorted behind them.
+
+Renumbered in steps of ten so the weight mirrors the project number and there is room to insert pages later (DE + EN each):
+
+| Page | old weight | new weight |
+|------|-----------|-----------|
+| `lernjournal` | 1 | **5** |
+| `p1-code-gadget` | 10 | **10** |
+| `p2-wetterstation` | 2 | **20** |
+| `p3-ki-labor` | 3 | **30** |
+| `p4-datendetektive` | 4 | **40** |
+| `p5-web-portfolio` | 5 | **50** |
+
+`lernjournal` stays above P1 as the intro page of the section (PLAN.md section 3). Verified in the built HTML for both languages: sidebar and the `children` list on `/projekte/` both read lernjournal -> P1 -> P2 -> P3 -> P4 -> P5; the P1 week pages are unaffected (weeks 1-7 in order). The homepage list was already correct, it is hand-written.
+
+**State:** the week 2 Verlaufsplan and the break removal are committed (`59bb6bc`); the duplicate stub `content/projekte/p1-code-und-gadget/` was deleted (`94c26ef`), which is why the build is now DE 113 / EN 115 pages. Issue #7 stays open, weeks 3-7 are still missing.
 
 ### Next steps (in order)
 
-1. Commit + push the week 2 Verlaufsplan.
-2. Decide the stress-test question (EN full vs. partial) before P2 is written, still open from 2026-09-17.
-3. Issue #4: MicroPython boards + Wokwi guides (week 3 depends on them).
-4. Issue #3: Kanban/Sprint method page; then replace the inline Kanban section on the week 2 student page with a link and trim the Kanban phase in this plan accordingly.
-5. Issue #7: Verlaufsplaene weeks 3-7.
+1. Decide the stress-test question (EN full vs. partial) before P2 is written, still open from 2026-09-17.
+2. Issue #4: MicroPython boards + Wokwi guides (week 3 depends on them).
+3. Issue #3: Kanban/Sprint method page; then replace the inline Kanban section on the week 2 student page with a link and trim the Kanban phase in this plan accordingly.
+4. Issue #7: Verlaufsplaene weeks 3-7.
 
 ---
 

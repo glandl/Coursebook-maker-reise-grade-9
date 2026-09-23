@@ -1,6 +1,6 @@
 +++
 title = "P5 · Web-Portfolio"
-weight = 5
+weight = 50
 +++
 
 **~7 Wochen · Themenbereiche 08, 07, 05**

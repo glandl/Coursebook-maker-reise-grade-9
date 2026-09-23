@@ -1,6 +1,6 @@
 +++
 title = "P3 · KI-Labor"
-weight = 3
+weight = 30
 +++
 
 **~7 Wochen · Themenbereiche 03, 01, 11**

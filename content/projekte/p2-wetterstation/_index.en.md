@@ -1,6 +1,6 @@
 +++
 title = "P2 · Weather Station / IoT"
-weight = 2
+weight = 20
 +++
 
 **~7 weeks · topic areas 04, 05, 01, 11**

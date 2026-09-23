@@ -1,6 +1,6 @@
 +++
 title = "P4 · Datendetektive"
-weight = 4
+weight = 40
 +++
 
 **~6 Wochen · Themenbereiche 01, 10**

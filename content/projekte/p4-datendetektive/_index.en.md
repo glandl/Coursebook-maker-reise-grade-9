@@ -1,6 +1,6 @@
 +++
 title = "P4 · Data Detectives"
-weight = 4
+weight = 40
 +++
 
 **~6 weeks · topic areas 01, 10**

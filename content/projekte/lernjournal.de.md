@@ -1,6 +1,6 @@
 +++
 title = "Lernjournal"
-weight = 1
+weight = 5
 +++
 
 Das Lernjournal begleitet dich durch das ganze Jahr. Es ist dein Gedächtnis, dein Nachweis und später das Material für dein Web-Portfolio in P5. Es lebt als **Markdown-Dateien in deinem eigenen GitHub-Repository**. Jeder Eintrag ist ein Commit, deine Lehrkraft sieht den Fortschritt laufend, nicht erst am Projektende.

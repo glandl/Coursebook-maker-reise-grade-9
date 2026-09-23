@@ -47,6 +47,7 @@ GitHub Classroom wurde am 28. 8. 2026 eingestellt. Der freie Nachfolger ist **[C
 **Plan B ohne Classroom 50** (Education-Freigabe nicht rechtzeitig da): Tab „Selbst anlegen“ in der Git-Anleitung. Jede:r legt ein privates Repo `lernjournal` an und trägt dich als Collaborator ein. Fortschritt siehst du dann über deine GitHub-Startseite (Feed) oder eine Lesezeichenliste der Repos. Umstieg auf Classroom 50 später ist möglich, kostet aber eine Stunde Migration.
 
 ### Sonstiges
+
 - [ ] Hardware-Schaukasten: je ein micro:bit, Pico, ESP32, Arduino, dazu 2–3 fertige Mini-Gadgets zum Anfassen (z. B. micro:bit-Würfel, Pico mit Taste + LED). Geht im Einstieg herum.
 - [ ] Deinen eigenen GitHub-Benutzernamen an die Tafel (für den Fall „Selbst anlegen“).
 

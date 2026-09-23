@@ -1,6 +1,6 @@
 +++
 title = "P3 · AI Lab"
-weight = 3
+weight = 30
 +++
 
 **~7 weeks · topic areas 03, 01, 11**
