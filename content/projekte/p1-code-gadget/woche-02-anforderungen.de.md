@@ -113,8 +113,6 @@ Zum Nachschauen (Verzweigungen, dann beide Schleifenarten):
 
 {{< youtube cSkP6rYQ3U0 >}}
 
-## Pause (5 min)
-
 ## 3. Team und Board (15 min)
 
 **Teams:** 2–3 Personen. Bildet Teams rund um eine gemeinsame Gadget-Idee, nicht nur um Freundschaften. Die Lehrkraft hilft, wenn jemand übrig bleibt.

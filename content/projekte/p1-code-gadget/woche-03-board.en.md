@@ -120,8 +120,6 @@ German videos on functions and lists:
 
 {{< youtube R7lZTvC9UUU >}}
 
-## Break (5 min)
-
 ## 4. Bring the board to life (45 min)
 
 ### 4a · Connect (10 min)

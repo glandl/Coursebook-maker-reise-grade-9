@@ -131,8 +131,6 @@ Zwei Teams tauschen die Plätze und lesen gegenseitig den Code (10 min pro Richt
 
 Punkte 1–2 sind Pflicht vor der Präsentation. Den Rest verbessert ihr, soweit Zeit bleibt. Mehr dazu, wie man Code systematisch verbessert: [Selbstlernen: Code-Qualität]({{% relref "selbstlernen/code-qualitaet" %}}).
 
-## Pause (5 min)
-
 ## 4. README: die Visitenkarte des Projekts (15 min)
 
 Die `README.md` ist das Erste, was man im Repository sieht. Sie ist später auch die Grundlage für die Projektseite in eurem [Web-Portfolio (P5)]({{% relref "projekte/p5-web-portfolio" %}}).

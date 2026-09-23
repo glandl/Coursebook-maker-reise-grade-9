@@ -168,8 +168,6 @@ German video introducing finite state machines:
 
 {{< youtube 3NroZHXFihE >}}
 
-## Break (5 min)
-
 ## 3. Reaction game · `reaction.py` (15 min)
 
 A state machine in which **time** is an event. With your `hardware.py`, this program is also the same for all boards. No light sensor in your setup? The `brightness` function is not needed here.

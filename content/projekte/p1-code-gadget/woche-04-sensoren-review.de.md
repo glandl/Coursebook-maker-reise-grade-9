@@ -276,8 +276,6 @@ stateDiagram-v2
 - Eine Person, die euer Gerät nicht kennt, kann anhand des Diagramms vorhersagen, was ein Tastendruck bewirkt.
 {{% /expand %}}
 
-## Pause (5 min)
-
 ## 6. Sprint-Review 1 (35 min)
 
 Das **Sprint-Review** ist eine Zwischenpräsentation: Ihr zeigt, was **läuft**, nicht was ihr vorhabt. Das Publikum sind eure Mitschüler:innen, sie geben Feedback wie Kund:innen.

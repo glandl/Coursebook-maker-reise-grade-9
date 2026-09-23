@@ -37,8 +37,6 @@ The demo showed that … (which user story?)
 
 What your teacher looks at (product, process, presentation, journal) is in the [rubric templates]({{% relref "lehrkraefte/rubriken" %}}).
 
-## Break (5 min)
-
 ## 3. Retrospective (20 min)
 
 The review looks at the **product**. The **retrospective** looks at the **collaboration**: how did we work, and what will we do differently in the next project? It is not about blame, it is about improvement.

@@ -4,6 +4,45 @@ Companion to `PLAN.md`. `PLAN.md` holds the settled design; this file tracks wha
 
 ---
 
+## 2026-09-23 · Teacher lesson plan week 2 (issue #7)
+
+**Goal:** the Verlaufsplan for the P1 week 2 double lesson (team, requirements, Kanban), DE + EN, matching the existing student page.
+
+- Written: `content/lehrkraefte/verlaufsplaene/woche-02.de.md` + `.en.md` (~1.6k DE / 1.9k EN words), same section structure as week 1: goals, preparation, minute-timed flow table, differentiation, pitfalls, homework, evidence.
+- **Timing follows the student page** (5 look-back / 30 Python / 15 team+board / 25 requirements / 10 Kanban / 10 journal = 95 min).
+- New in this plan versus week 1, because the project organisation starts here:
+  - **"Before the lesson: commit check"** section: the routine established in week 1 gets its own heading. The likely cause of a missing week-1 commit is an unfinished account, not unwillingness, so catch-up is planned into the Python phase using fast students as helpers.
+  - **Hardware stock count on the board before the board choice**, plus an allocation rule, otherwise every team picks the ESP32. Wokwi/simulator framed explicitly as equal, not as a second-class fallback.
+  - **Team list table** (team, members, gadget, board, repo URL) the teacher fills in during the lesson; the repo URLs are what the week-4 review and the weekly check run on.
+  - **Two pieces of evidence** this week (personal journal commit *and* team `ANFORDERUNGEN.md` / `REQUIREMENTS.md` + board photo). First time the team repo is part of the progress check.
+  - Hard 8-minute timer on team formation, with assignment of leftovers announced *before* the timer starts, since this phase is the one that can eat the lesson.
+- Competency framing: TB 02 (grade 9) for the Python half; requirements phase flagged as a preview of **TB 07** (grade 10) and Kanban as a preview of the agile-methods part of **TB 08**, consistent with PLAN.md section 4 where TB 07/08 are covered by P5 but practised from P1.
+- Pitfall list is specific to this lesson: `input()` -> `TypeError`, `=` vs `==`, `range` off-by-one, `while` without exit, team repo public by accident, unaccepted collaborator invitations, stories that are really tasks, unmeasurable acceptance criteria, Mermaid only rendering on GitHub.
+- `hugo --gc` clean (DE 116 / EN 118 pages), all `relref` links resolve; notice block, both tables and the inline mermaid code span verified in the generated HTML for DE and EN.
+- PLAN.md section 7 updated: teacher lesson plans are now "week 2 done, weeks 3-7 open".
+
+### Decision: no breaks in the book (applies to all projects)
+
+Raised by the user after reviewing this plan: **when a break happens and how long it is, is the teacher's call**, so the book must not plan one. Removed project-wide, not just from week 2:
+
+- 12 student pages: the `## Pause (5 min)` / `## Break (5 min)` heading deleted from P1 weeks 2-7, DE + EN. Section numbering was unaffected (the break heading was unnumbered).
+- 4 teacher plans: the break row deleted from the flow tables of weeks 1 and 2 (DE + EN) and all following minute ranges re-based, so each table now runs continuously 0-95. The "where to put the break" notice in the week 2 plan is gone.
+- Duration headers no longer claim 100 min of content: week plans say "Doppelstunde · 95 min verplant, die restliche Zeit bleibt frei" / "double lesson · 95 min planned, the remaining time stays free"; the Verlaufsplaene index says "rund 95 min verplant" / "around 95 min planned". Phase durations themselves were **not** changed, so the freed 5 min is slack the teacher places as they like.
+- Every P1 student page now sums to 95 min of sections; both teacher tables end at 95.
+- Recorded as a book-wide convention in PLAN.md section 6, so P2-P5 are written the same way.
+
+**Not done:** committing/pushing (needs confirmation). Issue #7 stays open, weeks 3-7 are still missing.
+
+### Next steps (in order)
+
+1. Commit + push the week 2 Verlaufsplan.
+2. Decide the stress-test question (EN full vs. partial) before P2 is written, still open from 2026-09-17.
+3. Issue #4: MicroPython boards + Wokwi guides (week 3 depends on them).
+4. Issue #3: Kanban/Sprint method page; then replace the inline Kanban section on the week 2 student page with a link and trim the Kanban phase in this plan accordingly.
+5. Issue #7: Verlaufsplaene weeks 3-7.
+
+---
+
 ## 2026-09-17 · P1 „Code & Gadget" weeks 2–7 written (issue #5)
 
 **Goal:** finish the P1 exemplar: phase pages, board scaffolds, journal tasks, quiz, videos, DE + EN, and run the cost stress test.

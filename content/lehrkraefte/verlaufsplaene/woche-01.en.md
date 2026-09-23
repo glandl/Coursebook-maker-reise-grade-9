@@ -3,7 +3,7 @@ title = "Week 1 · P1 Kickoff"
 weight = 1
 +++
 
-**Student page:** [P1 Week 1 · Kickoff]({{% relref "projekte/p1-code-gadget/woche-01-kickoff" %}}) · **Duration:** double lesson, 100 min net
+**Student page:** [P1 Week 1 · Kickoff]({{% relref "projekte/p1-code-gadget/woche-01-kickoff" %}}) · **Duration:** double lesson · 95 min planned, the remaining time stays free
 
 ## Lesson goals
 
@@ -17,19 +17,23 @@ weight = 1
 ## Preparation
 
 ### Technology
+
 - [ ] Thonny working on all school PCs, test run with `input()` (some sandbox configurations block the shell).
 - [ ] github.com reachable from the school network, including email delivery for the confirmation code (check the school mail filter!).
 - [ ] Projector, book (start page, P1 brief, week 1, Git guide) open in the browser.
 - [ ] Fallback in case of PC failure: [python.microbit.org](https://python.microbit.org/) in the browser.
 
 ### Classroom 50 (recommended)
+
 GitHub Classroom was retired on 28 August 2026. The free successor is **[Classroom 50](https://classroom50.org/)** by the Fifty Foundation (CS50), documented in its [wiki](https://github.com/foundation50/classroom50/wiki). Every student gets a **private repository in your organisation**, you have access to all of them, and the submissions page shows the latest push per person with a timestamp. Exactly the progress view we want.
 
 **At least two weeks before the first lesson:**
+
 - [ ] Get verified as a teacher with [GitHub Education](https://docs.github.com/en/education/about-github-education/github-education-for-teachers/apply-to-github-education-as-a-teacher) (faculty ID or employment letter). Approval takes days to two weeks.
 - [ ] Create a GitHub **organisation** for the school/class and upgrade it to the **Team plan** using the education benefit. Classroom 50 requires the Team plan (GitHub Pages from a private repo); the Free plan is not enough. The benefit on your account does **not** upgrade the organisation by itself.
 
 **The week before:**
+
 - [ ] On classroom50.org **Sign in with GitHub** → **Set up new organization** → **Run setup** (creates a `classroom50` repo and workflows) → **Next: service token** (fine-grained PAT scoped to this organisation only) → **Done**.
 - [ ] **Create classroom**: name e.g. `Informatik 5A`, keep the slug short (it becomes part of the repo names, e.g. `inf5a`).
 - [ ] Create the **template repository** `lernjournal-vorlage` in the organisation (settings: *Template repository*), content see below. Never put solutions in it: students can read the template including its history.
@@ -43,22 +47,22 @@ GitHub Classroom was retired on 28 August 2026. The free successor is **[Classro
 **Plan B without Classroom 50** (education approval not in time): tab "Create it yourself" in the Git guide. Everyone creates a private repo `lernjournal` and adds you as a collaborator. You then see progress via your GitHub home feed or a bookmark list of the repos. Moving to Classroom 50 later is possible but costs a lesson of migration.
 
 ### Other
+
 - [ ] Hardware showcase: one micro:bit, Pico, ESP32, Arduino each, plus 2–3 finished mini gadgets to touch (e.g. micro:bit dice, Pico with button + LED). Passed around during the intro.
 - [ ] Your own GitHub username on the board (for the "create it yourself" case).
 
 ## Flow
 
 | Time | Phase | Teacher | Students | Material |
-|------|-------|---------|----------|----------|
+| ------ | ------- | --------- | ---------- | ---------- |
 | 0–10 | **Intro** | Present the Maker Journey: 5 projects, rhythm kickoff→sprints→review→retro, role of the book. Demo two finished gadgets, pass the boards around. Announce the journal: "lives on GitHub, you create it today". | Listen, look at hardware | Projector, start page, showcase |
 | 10–25 | **Tool check** | Start Thonny together, show shell vs. editor, `print` in the shell. Show the stop button now already. Browser fallback on problems. | Start Thonny, first command in the shell | PCs, Thonny guide |
 | 25–55 | **Two programs** | Show program 1 (2 min), then individual/pair work. Circulate. After ~15 min a short stop: draw `switch.py` on the board as two circles with arrows, introduce the word **state**. 5 min before the end: announce "take a screenshot". | Run and modify `hello.py`, `switch.py`, screenshot; fast ones: `trafficlight.py` | Book page week 1 |
-| 55–60 | **Break** | | | |
-| 60–75 | **GitHub account & repo** | Walk through account creation step by step on the projector. Collect usernames (form/list), upload them as roster, then show the onboarding and assignment links. Those who finish help their neighbour. Catch confirmation code problems immediately (spam folder, second address). | Create account, report username, sign in at classroom50.org, accept assignment, bookmark repo link | Git guide parts 1+2, roster |
-| 75–80 | **Markdown intro** | On the projector: open README in the web editor, show `#`, `-`, `**bold**`, image syntax, Preview tab. No more than these four things. | Watch, open the cheat sheet | Markdown cheat sheet |
-| 80–85 | **First commit** | Have README filled in with name and class, dictate the commit message. Show on the Classroom 50 submissions page (after reload) that pushes arrive. | Edit README, preview, commit | Git guide part 3 |
-| 85–98 | **Journal task 1** | Open `p1/woche-01.md` (from the template) or create it. Let them write; gadget ideas are part of the entry. Screenshot upload as a bonus, otherwise homework. | Write entry, commit | Journal task 1 |
-| 98–100 | **Outlook** | Next week: team and board choice, requirements for the gadget, Kanban. Name the homework. | | |
+| 55–70 | **GitHub account & repo** | Walk through account creation step by step on the projector. Collect usernames (form/list), upload them as roster, then show the onboarding and assignment links. Those who finish help their neighbour. Catch confirmation code problems immediately (spam folder, second address). | Create account, report username, sign in at classroom50.org, accept assignment, bookmark repo link | Git guide parts 1+2, roster |
+| 70–75 | **Markdown intro** | On the projector: open README in the web editor, show `#`, `-`, `**bold**`, image syntax, Preview tab. No more than these four things. | Watch, open the cheat sheet | Markdown cheat sheet |
+| 75–80 | **First commit** | Have README filled in with name and class, dictate the commit message. Show on the Classroom 50 submissions page (after reload) that pushes arrive. | Edit README, preview, commit | Git guide part 3 |
+| 80–93 | **Journal task 1** | Open `p1/woche-01.md` (from the template) or create it. Let them write; gadget ideas are part of the entry. Screenshot upload as a bonus, otherwise homework. | Write entry, commit | Journal task 1 |
+| 93–95 | **Outlook** | Next week: team and board choice, requirements for the gadget, Kanban. Name the homework. | | |
 
 ## Differentiation
 

@@ -37,8 +37,6 @@ Die Demo hat gezeigt, dass … (welche User Story?)
 
 Worauf die Lehrkraft achtet (Produkt, Prozess, Präsentation, Journal), steht in den [Rubrik-Vorlagen]({{% relref "lehrkraefte/rubriken" %}}).
 
-## Pause (5 min)
-
 ## 3. Retrospektive (20 min)
 
 Das Review schaut auf das **Produkt**. Die **Retrospektive** schaut auf die **Zusammenarbeit**: Wie haben wir gearbeitet, und was machen wir im nächsten Projekt anders? Es geht nicht um Schuld, sondern um Verbesserung.

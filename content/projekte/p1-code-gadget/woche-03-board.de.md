@@ -118,8 +118,6 @@ def mittelwert(werte):
 
 {{< youtube R7lZTvC9UUU >}}
 
-## Pause (5 min)
-
 ## 4. Board in Betrieb nehmen (45 min)
 
 ### 4a · Verbinden (10 min)

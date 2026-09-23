@@ -86,6 +86,7 @@ Rhythm per project: **Kickoff/Anforderungen → Sprints (Bauen) → Review/Präs
 | Hosting | **GitHub Pages** via GitHub Actions |
 | Languages | Bilingual, **German leads, English full mirror** (Hugo multilingual, language switcher) |
 | German style | Doppelpunkt: **Schüler:innen**; students addressed as „du" in instructions |
+| Breaks | **Never planned in the book** (decided 2026-09-23). Student pages and Verlaufspläne contain no break section or row; when a break happens and how long it lasts is the teacher's decision. A double lesson is therefore planned as **95 min of content**, the rest is slack. |
 | Must-have content features | Syntax-highlighted code snippets, YouTube embeds (built-in shortcode), resource links, **tabbed code blocks per platform**, callouts, search, print/offline view |
 | Programming spine | **Python everywhere** (PC: Python; Boards: MicroPython) |
 | IDE | **Thonny for P1–P2** (bundled Python, portable/no-admin install, built-in MicroPython flashing/REPL for Pico & ESP32, beginner debugger, no AI autocomplete). **VS Code from P3** (notebooks/pandas/SQL in P3–P4, HTML/CSS/JS + Git in P5). Decided 2026-09-15. |
@@ -108,7 +109,7 @@ Teacher section is **public** (deliberate decision), just a separate menu branch
 
 1. **Skeleton:** Hugo + Relearn, DE/EN multilingual config, GitHub Actions → GitHub Pages, full navigation with stub pages. ✅ done, site live at https://glandl.github.io/Coursebook-maker-reise-grade-9/
 2. **Kompetenzmatrix** page (from §4, verified against the full Excel texts). ✅ done 2026-09-17, see `lehrkraefte/kompetenzmatrix`
-3. **P1 „Code & Gadget" fully written** — the exemplar that defines the format (phases, scaffolds, platform tabs, journal tasks, quiz). 🟢 student pages done 2026-09-17 (weeks 1–7, DE + EN, issue #5). Still open outside #5: board setup guide (#4), Kanban method page (#3), teacher lesson plans weeks 2–7 (#7), classroom test on real hardware
+3. **P1 „Code & Gadget" fully written** — the exemplar that defines the format (phases, scaffolds, platform tabs, journal tasks, quiz). 🟢 student pages done 2026-09-17 (weeks 1–7, DE + EN, issue #5). Still open outside #5: board setup guide (#4), Kanban method page (#3), teacher lesson plans (#7: week 2 done 2026-09-23, weeks 3–7 open), classroom test on real hardware
 4. **One-page briefs for P2–P5** so the whole year is visible from day one.
 5. Then project by project: P2 → P3 → P4 → P5 + matching Selbstlern-Lernpfade, validated in class as the year progresses.
 

@@ -131,8 +131,6 @@ Two teams swap places and read each other's code (10 min each way). The reviewer
 
 Points 1–2 are mandatory before the presentation. Improve the rest as far as time allows. More on improving code systematically: [Self-study: Code Quality]({{% relref "selbstlernen/code-qualitaet" %}}).
 
-## Break (5 min)
-
 ## 4. README: the project's business card (15 min)
 
 The `README.md` is the first thing people see in the repository. Later it is also the basis for the project page in your [web portfolio (P5)]({{% relref "projekte/p5-web-portfolio" %}}).

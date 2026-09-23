@@ -278,8 +278,6 @@ stateDiagram-v2
 - A person who does not know your device can predict from the diagram what a button press does.
 {{% /expand %}}
 
-## Break (5 min)
-
 ## 6. Sprint review 1 (35 min)
 
 The **sprint review** is an interim presentation: you show what **works**, not what you are planning. The audience is your classmates; they give feedback like customers.

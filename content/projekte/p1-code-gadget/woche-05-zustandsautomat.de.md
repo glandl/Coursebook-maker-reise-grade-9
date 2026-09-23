@@ -166,8 +166,6 @@ Mehr zu Dictionaries: [Selbstlernen: Datenstrukturen]({{% relref "selbstlernen/d
 
 {{< youtube 3NroZHXFihE >}}
 
-## Pause (5 min)
-
 ## 3. Reaktionsspiel · `reaktion.py` (15 min)
 
 Ein Automat, bei dem **Zeit** ein Ereignis ist. Auch dieses Programm ist mit eurer `hardware.py` für alle Boards gleich. Ohne Lichtsensor im Aufbau? Die Funktion `helligkeit` wird hier nicht gebraucht.

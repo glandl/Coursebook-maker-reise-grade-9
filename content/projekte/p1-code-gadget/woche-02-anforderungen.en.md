@@ -113,8 +113,6 @@ To rewatch (German: branching, then both kinds of loops):
 
 {{< youtube cSkP6rYQ3U0 >}}
 
-## Break (5 min)
-
 ## 3. Team and board (15 min)
 
 **Teams:** 2–3 people. Form teams around a shared gadget idea, not just around friendships. Your teacher helps if someone is left over.

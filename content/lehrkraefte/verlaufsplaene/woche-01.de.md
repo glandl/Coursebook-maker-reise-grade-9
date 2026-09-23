@@ -3,7 +3,7 @@ title = "Woche 1 · P1 Kickoff"
 weight = 1
 +++
 
-**Schüler:innen-Seite:** [P1 Woche 1 · Kickoff]({{% relref "projekte/p1-code-gadget/woche-01-kickoff" %}}) · **Dauer:** Doppelstunde, 100 min netto
+**Schüler:innen-Seite:** [P1 Woche 1 · Kickoff]({{% relref "projekte/p1-code-gadget/woche-01-kickoff" %}}) · **Dauer:** Doppelstunde · 95 min verplant, die restliche Zeit bleibt frei
 
 ## Ziele der Stunde
 
@@ -17,19 +17,23 @@ weight = 1
 ## Vorbereitung
 
 ### Technik
+
 - [ ] Thonny auf allen Schul-PCs lauffähig, Testlauf mit `input()` (manche Sandbox-Konfigurationen blockieren die Shell).
 - [ ] github.com aus dem Schulnetz erreichbar, inklusive E-Mail-Empfang für den Bestätigungscode (Schul-Mail-Filter prüfen!).
 - [ ] Beamer, Buch (Startseite, P1-Brief, Woche 1, Git-Anleitung) im Browser geöffnet.
 - [ ] Fallback bei PC-Ausfall: [python.microbit.org](https://python.microbit.org/) im Browser.
 
 ### Classroom 50 (empfohlen)
+
 GitHub Classroom wurde am 28. 8. 2026 eingestellt. Der freie Nachfolger ist **[Classroom 50](https://classroom50.org/)** der Fifty Foundation (CS50), Doku im [Wiki](https://github.com/foundation50/classroom50/wiki). Jede:r Schüler:in bekommt ein **privates Repository in deiner Organisation**, du hast Zugriff auf alle, und die Submissions-Seite zeigt pro Person den letzten Push mit Zeitstempel. Genau die Fortschrittsansicht, die wir wollen.
 
 **Mindestens zwei Wochen vor der ersten Stunde:**
+
 - [ ] Als Lehrkraft bei [GitHub Education](https://docs.github.com/en/education/about-github-education/github-education-for-teachers/apply-to-github-education-as-a-teacher) verifizieren lassen (Dienstausweis oder Schulbestätigung). Freigabe dauert Tage bis zwei Wochen.
 - [ ] GitHub-**Organisation** für die Schule/Klasse anlegen und mit dem Education-Benefit auf den **Team-Plan** hochstufen. Classroom 50 braucht den Team-Plan (GitHub Pages aus privatem Repo); der Free-Plan reicht nicht. Der Benefit auf deinem Konto stuft die Organisation **nicht** automatisch hoch.
 
 **In der Woche davor:**
+
 - [ ] Auf classroom50.org **Sign in with GitHub** → **Set up new organization** → **Run setup** (legt ein Repo `classroom50` und Workflows an) → **Next: service token** (fine-grained PAT nur für diese Organisation) → **Done**.
 - [ ] **Create classroom**: Name z. B. `Informatik 5A`, Slug kurz halten (wird Teil der Repo-Namen, z. B. `inf5a`).
 - [ ] **Vorlagen-Repository** `lernjournal-vorlage` in der Organisation anlegen (Settings: *Template repository*), Inhalt siehe unten. Keine Lösungen hineinlegen: Schüler:innen können die Vorlage samt Historie lesen.
@@ -53,12 +57,11 @@ GitHub Classroom wurde am 28. 8. 2026 eingestellt. Der freie Nachfolger ist **[C
 | 0–10 | **Einstieg** | Maker-Reise vorstellen: 5 Projekte, Rhythmus Kickoff→Sprints→Review→Retro, Rolle des Buchs. Zwei fertige Gadgets vorführen, Boards herumgeben. Lernjournal ankündigen: „liegt bei GitHub, ihr legt es heute an“. | Zuhören, Hardware anschauen | Beamer, Startseite, Schaukasten |
 | 10–25 | **Werkzeug-Check** | Thonny gemeinsam starten, Shell vs. Editor zeigen, `print` in Shell. Stopp-Button jetzt schon zeigen. Bei Problemen Browser-Fallback. | Thonny starten, erster Befehl in Shell | PCs, Thonny-Anleitung |
 | 25–55 | **Zwei Programme** | Programm 1 vorzeigen (2 min), dann Einzel-/Paararbeit. Zirkulieren. Nach ~15 min kurzer Stopp: `schalter.py` an der Tafel als zwei Kreise mit Pfeilen zeichnen, Wort **Zustand** einführen. 5 min vor Schluss: „Screenshot machen“ ansagen. | `hallo.py`, `schalter.py` ausführen und verändern, Screenshot; Schnelle: `ampel.py` | Buchseite Woche 1 |
-| 55–60 | **Pause** | | | |
-| 60–75 | **GitHub-Konto & Repo** | Kontoanlage Schritt für Schritt am Beamer mitmachen. Benutzernamen einsammeln (Formular/Liste), als Roster hochladen, dann Onboarding- und Aufgaben-Link zeigen. Wer fertig ist, hilft der Nachbarin. Bestätigungscode-Probleme sofort auffangen (Spam-Ordner, zweite Adresse). | Konto anlegen, Benutzernamen melden, bei classroom50.org anmelden, Assignment annehmen, Repo-Link als Lesezeichen | Git-Anleitung Teil 1+2, Roster |
-| 75–80 | **Markdown-Intro** | Am Beamer: README im Web-Editor öffnen, `#`, `-`, `**fett**`, Bild-Syntax zeigen, Reiter Preview. Nicht mehr als diese vier Dinge. | Mitschauen, Spickzettel öffnen | Markdown-Spickzettel |
-| 80–85 | **Erster Commit** | README mit Name und Klasse ausfüllen lassen, Commit-Nachricht vorgeben. Auf der Submissions-Seite von Classroom 50 (nach Reload) zeigen, dass die Pushes ankommen. | README bearbeiten, Preview, Commit | Git-Anleitung Teil 3 |
-| 85–98 | **Journalauftrag 1** | `p1/woche-01.md` öffnen (aus der Vorlage) bzw. anlegen. Schreiben lassen; Gadget-Ideen sind Teil des Eintrags. Screenshot-Upload als Bonus, sonst Hausaufgabe. | Eintrag schreiben, committen | Journalauftrag 1 |
-| 98–100 | **Ausblick** | Nächste Woche: Team- und Board-Wahl, Anforderungen ans Gadget, Kanban. Hausaufgabe nennen. | | |
+| 55–70 | **GitHub-Konto & Repo** | Kontoanlage Schritt für Schritt am Beamer mitmachen. Benutzernamen einsammeln (Formular/Liste), als Roster hochladen, dann Onboarding- und Aufgaben-Link zeigen. Wer fertig ist, hilft der Nachbarin. Bestätigungscode-Probleme sofort auffangen (Spam-Ordner, zweite Adresse). | Konto anlegen, Benutzernamen melden, bei classroom50.org anmelden, Assignment annehmen, Repo-Link als Lesezeichen | Git-Anleitung Teil 1+2, Roster |
+| 70–75 | **Markdown-Intro** | Am Beamer: README im Web-Editor öffnen, `#`, `-`, `**fett**`, Bild-Syntax zeigen, Reiter Preview. Nicht mehr als diese vier Dinge. | Mitschauen, Spickzettel öffnen | Markdown-Spickzettel |
+| 75–80 | **Erster Commit** | README mit Name und Klasse ausfüllen lassen, Commit-Nachricht vorgeben. Auf der Submissions-Seite von Classroom 50 (nach Reload) zeigen, dass die Pushes ankommen. | README bearbeiten, Preview, Commit | Git-Anleitung Teil 3 |
+| 80–93 | **Journalauftrag 1** | `p1/woche-01.md` öffnen (aus der Vorlage) bzw. anlegen. Schreiben lassen; Gadget-Ideen sind Teil des Eintrags. Screenshot-Upload als Bonus, sonst Hausaufgabe. | Eintrag schreiben, committen | Journalauftrag 1 |
+| 93–95 | **Ausblick** | Nächste Woche: Team- und Board-Wahl, Anforderungen ans Gadget, Kanban. Hausaufgabe nennen. | | |
 
 ## Differenzierung
 
