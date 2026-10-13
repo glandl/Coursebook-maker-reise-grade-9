@@ -124,7 +124,7 @@ To rewatch (German: branching, then both kinds of loops):
 | **micro:bit** (V2) | buttons, 5×5 LED display, speaker, microphone, light, motion and temperature sensor built in. No wiring needed. | quick start, games, step counter, dice | few free connectors, no Wi-Fi |
 | **Raspberry Pi Pico** (W) | cheap, many pins, analog inputs | night light, alarm system, anything on a breadboard | connect sensors and LEDs yourself. Only the **Pico W** has Wi-Fi. |
 | **ESP32** | Wi-Fi and Bluetooth built in, fast | anything that should go online later | pinout differs between models |
-| **Arduino** | robust, widespread | if the board is already there | the classic **UNO R3** cannot run MicroPython: then use [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) with a virtual ESP32 |
+| **Arduino** | robust, widespread | if the board is already there | **UNO R3** and **R4** cannot run MicroPython (the **Nano ESP32** can): then use [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) with a virtual ESP32 |
 
 {{% notice style="tip" title="Looking ahead" %}}
 In **P2 (weather station)** you send measurements over Wi-Fi. With an **ESP32** or **Pico W** you can keep using your board there. The micro:bit makes P1 easiest, but for P2 you will then need a second board.

@@ -165,8 +165,8 @@ def gedrueckt():
 ```
 {{% /tab %}}
 {{% tab title="Arduino" %}}
-**UNO R4 / Nano ESP32 mit MicroPython:** ESP32-Datei verwenden, Pinnummern laut Pinout auf [MicroPython-Boards]({{% relref "werkzeuge/micropython-boards" %}}) anpassen. Die Funktionsnamen bleiben gleich, dann läuft der restliche Code unverändert.
-**UNO R3:** [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) mit ESP32 und derselben Verkabelung.
+**Nano ESP32:** ESP32-Datei verwenden, Pinnummern laut Pinout auf [MicroPython-Boards]({{% relref "werkzeuge/micropython-boards" %}}) anpassen. Die Funktionsnamen bleiben gleich, dann läuft der restliche Code unverändert.
+**UNO R3 / R4** (kein MicroPython): [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) mit ESP32 und derselben Verkabelung.
 {{% /tab %}}
 {{< /tabs >}}
 

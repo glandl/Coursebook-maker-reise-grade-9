@@ -41,7 +41,7 @@ Für reines PC-Python ohne Board funktioniert jeder Online-Python-Editor, der `i
 
 ## Erster Start
 
-1. Beim ersten Start fragt Thonny nach Sprache: **Deutsch** wählen (später änderbar unter *Extras → Optionen → Allgemein*).
+1. Beim ersten Start fragt Thonny nach Sprache: **Deutsch** wählen (später änderbar unter *Werkzeuge → Optionen → Allgemein*).
 2. Oben ist der **Editor** (hier schreibst du Programme), unten die **Shell** (hier probierst du einzelne Befehle).
 3. In die Shell tippen und Enter drücken:
 
@@ -79,4 +79,4 @@ Erste Schritte mit Python in Thonny:
 
 Thonny ist das Werkzeug für **P1 und P2**. Ab **P3** wechselt der Kurs zu **Visual Studio Code**, weil dort Notebooks, Datenanalyse, SQL und später Web-Entwicklung mit Git besser aufgehoben sind. Eine eigene Setup-Anleitung folgt zum Start von P3.
 
-Ab P1 Woche 3 verbindest du Thonny mit deinem Board: *Extras → Optionen → Interpreter* → MicroPython auswählen. Anleitung unter [MicroPython-Boards]({{% relref "werkzeuge/micropython-boards" %}}).
+Ab P1 Woche 3 verbindest du Thonny mit deinem Board: *Werkzeuge → Optionen → Interpreter* → MicroPython auswählen. Anleitung unter [MicroPython-Boards]({{% relref "werkzeuge/micropython-boards" %}}).

@@ -183,8 +183,8 @@ for i in range(10):
 No onboard LED, or it stays dark? External LED: GPIO 18 → 220 Ω → long LED leg, short leg → GND, in the code `Pin(18, Pin.OUT)`.
 {{% /tab %}}
 {{% tab title="Arduino" %}}
-**UNO R4 / Nano ESP32 with MicroPython:** code as in the ESP32 tab, adjust pin numbers according to your board's pinout on [MicroPython Boards]({{% relref "werkzeuge/micropython-boards" %}}).
-**UNO R3:** create an ESP32 project in [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) and use the ESP32 code.
+**Nano ESP32:** code as in the ESP32 tab, adjust pin numbers according to your board's pinout on [MicroPython Boards]({{% relref "werkzeuge/micropython-boards" %}}).
+**UNO R3 / R4** (no MicroPython): create an ESP32 project in [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) and use the ESP32 code.
 {{% /tab %}}
 {{< /tabs >}}
 
@@ -306,7 +306,7 @@ while True:
 ```
 {{% /tab %}}
 {{% tab title="Arduino" %}}
-Code as in the ESP32 tab, adjust the pins (see [MicroPython Boards]({{% relref "werkzeuge/micropython-boards" %}})). UNO R3: [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) with ESP32.
+Code as in the ESP32 tab, adjust the pins (see [MicroPython Boards]({{% relref "werkzeuge/micropython-boards" %}})). UNO R3 / R4: [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) with ESP32.
 {{% /tab %}}
 {{< /tabs >}}
 

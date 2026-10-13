@@ -124,7 +124,7 @@ Zum Nachschauen (Verzweigungen, dann beide Schleifenarten):
 | **micro:bit** (V2) | Tasten, 5×5-LED-Anzeige, Lautsprecher, Mikrofon, Licht-, Lage- und Temperatursensor schon eingebaut. Kein Stecken nötig. | schneller Start, Spiele, Schrittzähler, Würfel | wenig freie Anschlüsse, kein WLAN |
 | **Raspberry Pi Pico** (W) | günstig, viele Anschlüsse, analoge Eingänge | Nachtlicht, Alarmanlage, alles mit Steckbrett | Sensoren und LEDs selbst anschließen. Nur die **Pico W** hat WLAN. |
 | **ESP32** | WLAN und Bluetooth eingebaut, schnell | alles, was später ins Netz soll | Pinbelegung je nach Modell unterschiedlich |
-| **Arduino** | robust, weit verbreitet | wenn das Board schon da ist | Der klassische **UNO R3** kann kein MicroPython: dann [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) mit virtuellem ESP32 |
+| **Arduino** | robust, weit verbreitet | wenn das Board schon da ist | **UNO R3** und **R4** können kein MicroPython (der **Nano ESP32** schon): dann [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) mit virtuellem ESP32 |
 
 {{% notice style="tip" title="Blick nach vorn" %}}
 In **P2 (Wetterstation)** schickt ihr Messwerte über WLAN. Mit **ESP32** oder **Pico W** könnt ihr euer Board dort weiterverwenden. Mit micro:bit ist P1 am einfachsten, für P2 braucht ihr dann ein zweites Board.

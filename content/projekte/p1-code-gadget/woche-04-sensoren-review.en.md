@@ -165,8 +165,8 @@ def pressed():
 ```
 {{% /tab %}}
 {{% tab title="Arduino" %}}
-**UNO R4 / Nano ESP32 with MicroPython:** use the ESP32 file and adjust the pin numbers according to the pinout on [MicroPython Boards]({{% relref "werkzeuge/micropython-boards" %}}). Keep the function names, then the rest of the code runs unchanged.
-**UNO R3:** [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) with ESP32 and the same wiring.
+**Nano ESP32:** use the ESP32 file and adjust the pin numbers according to the pinout on [MicroPython Boards]({{% relref "werkzeuge/micropython-boards" %}}). Keep the function names, then the rest of the code runs unchanged.
+**UNO R3 / R4** (no MicroPython): [Wokwi]({{% relref "werkzeuge/wokwi-simulator" %}}) with ESP32 and the same wiring.
 {{% /tab %}}
 {{< /tabs >}}
 

@@ -148,7 +148,7 @@ while True:
 ```
 {{% /tab %}}
 {{% tab title="Arduino" %}}
-Ein **Arduino UNO R4** oder **Nano ESP32** läuft mit MicroPython, dann gilt der ESP32-Code (LED-Pin anpassen). Der klassische **UNO R3** kann kein MicroPython: nimm dafür den [Wokwi-Simulator]({{% relref "werkzeuge/wokwi-simulator" %}}) mit einem virtuellen ESP32 oder den C++-Anhang.
+Ein **Arduino Nano ESP32** läuft mit MicroPython, dann gilt der ESP32-Code (LED-Pin anpassen). **UNO R3** und **UNO R4** können kein MicroPython: nimm dafür den [Wokwi-Simulator]({{% relref "werkzeuge/wokwi-simulator" %}}) mit einem virtuellen ESP32 oder den C++-Anhang.
 {{% /tab %}}
 {{< /tabs >}}
 
