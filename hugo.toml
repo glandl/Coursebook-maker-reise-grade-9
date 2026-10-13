@@ -35,5 +35,7 @@ defaultContentLanguage = 'de'
   themeVariant = ['auto', 'relearn-light', 'relearn-dark']
   collapsibleMenu = true
   showVisitedLinks = true
+  # open external links in a new tab (Relearn default since 8.1 is `_self`)
+  externalLinkTarget = "_blank"
   # breadcrumb + title separator defaults are fine; features like math/mermaid
   # load automatically per page when their shortcodes/codefences are used
