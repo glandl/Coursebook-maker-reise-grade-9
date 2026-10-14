@@ -34,9 +34,27 @@ jobs:
       - name: Build
         # baseURL is derived from the repository name, so it stays correct if the
         # repo is renamed; hugo.toml's baseURL only matters for local builds.
-        run: >-
-          hugo --gc --minify
-          --baseURL "https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/"
+        run: hugo --gc --minify --baseURL "$BASE_URL"
+        env:
+          BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
+
+      # PDF scriptum: Hugo cannot write PDFs, so headless Chromium prints the
+      # theme's whole-book print view into public/ (see scripts/pdf/build-pdf.mjs).
+      - name: Setup Node
+        uses: actions/setup-node@v5
+        with:
+          node-version: 24
+          cache: npm
+          cache-dependency-path: scripts/pdf/package-lock.json
+
+      - name: Build PDF
+        working-directory: scripts/pdf
+        run: |
+          npm ci
+          npx playwright install --with-deps chromium
+          node build-pdf.mjs --base-url "$BASE_URL"
+        env:
+          BASE_URL: https://${{ github.repository_owner }}.github.io/${{ github.event.repository.name }}/
 
       - name: Deploy to gh-pages
         uses: peaceiris/actions-gh-pages@v4

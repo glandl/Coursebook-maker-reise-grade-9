@@ -1,0 +1,12 @@
+{
+  "name": "coursebook-pdf",
+  "private": true,
+  "description": "Renders the built Hugo site (Relearn print view) into a PDF scriptum per language",
+  "type": "module",
+  "scripts": {
+    "build": "node build-pdf.mjs"
+  },
+  "dependencies": {
+    "playwright": "1.64.0"
+  }
+}

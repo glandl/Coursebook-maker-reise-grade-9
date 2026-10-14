@@ -20,11 +20,22 @@ defaultContentLanguage = 'de'
     label = 'Deutsch'
     title = 'Kursbuch Informatik'
     weight = 1
+    # PDF scriptum, generated after the build by scripts/pdf (see .github/workflows/deploy.yml)
+    [[languages.de.menu.shortcuts]]
+      pre = '<i class="fa-fw fas fa-file-pdf"></i> '
+      name = 'Kursbuch als PDF'
+      url = 'kursbuch-informatik.pdf'
+      weight = 10
   [languages.en]
     locale = 'en'
     label = 'English'
     title = 'Coursebook Informatics'
     weight = 2
+    [[languages.en.menu.shortcuts]]
+      pre = '<i class="fa-fw fas fa-file-pdf"></i> '
+      name = 'Coursebook as PDF'
+      url = 'en/coursebook-informatics.pdf'
+      weight = 10
 
 [markup]
   [markup.highlight]

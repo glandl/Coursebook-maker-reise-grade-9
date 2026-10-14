@@ -6,3 +6,6 @@ resources/_gen/
 
 # macOS
 .DS_Store
+
+# PDF build tooling
+scripts/pdf/node_modules/
