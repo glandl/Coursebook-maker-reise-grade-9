@@ -64,5 +64,6 @@ Auf GitHub gibt es im Editor den Reiter **Preview**. Dort siehst du sofort, wie 
 
 ## Mehr
 
+- Diagramme direkt im Markdown: [Diagramme mit Mermaid]({{% relref "werkzeuge/mermaid" %}})
 - [Markdown-Grundlagen auf GitHub Docs](https://docs.github.com/de/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) (deutsch)
 - [CommonMark-Referenz](https://commonmark.org/help/) mit interaktivem 10-Minuten-Tutorial (englisch)

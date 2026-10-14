@@ -64,5 +64,6 @@ The GitHub editor has a **Preview** tab. There you see immediately how your text
 
 ## More
 
+- Diagrams right inside Markdown: [Diagrams with Mermaid]({{% relref "werkzeuge/mermaid" %}})
 - [Basic writing and formatting syntax on GitHub Docs](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax)
 - [CommonMark reference](https://commonmark.org/help/) with an interactive 10-minute tutorial
