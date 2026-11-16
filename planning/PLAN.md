@@ -90,7 +90,8 @@ Rhythm per project: **Kickoff/Anforderungen → Sprints (Bauen) → Review/Präs
 | Must-have content features | Syntax-highlighted code snippets, YouTube embeds (built-in shortcode), resource links, **tabbed code blocks per platform**, callouts, search, print/offline view |
 | Programming spine | **Python everywhere** (PC: Python; Boards: MicroPython) |
 | IDE | **Thonny for P1–P2** (bundled Python, portable/no-admin install, built-in MicroPython flashing/REPL for Pico & ESP32, beginner debugger, no AI autocomplete). **VS Code from P3** (notebooks/pandas/SQL in P3–P4, HTML/CSS/JS + Git in P5). Decided 2026-09-15. |
-| Hardware | micro:bit, Raspberry Pi/Pico, Arduino, ESP32 — **all equal, student choice**; per-platform instructions as tabs. Arduino-UNO fallback: Wokwi simulator / ESP32, C++ appendix if needed |
+| Hardware | micro:bit, Raspberry Pi/Pico, Arduino, ESP32 — **all equal, student choice**; per-platform instructions as tabs. Arduino-UNO fallback: Wokwi simulator / ESP32, C++ appendix if needed. **Exception:** Bausteine are Pico 2 W only, see `adr/0001-bausteine-pico-2-w-only.md` |
+| Bausteine language | **DE first** (decided 2026-11-09): Bausteine are published in German as soon as they are written; the EN mirror follows in a batch once they have been used in class. Until then the EN Werkzeuge page notes that the building blocks are German only. Baupläne are German only, they are not book content. |
 | Student devices | School PCs (install rights) + BYOD; browser tools (Wokwi, micro:bit editor, …) as universal fallback |
 
 ### Site structure (projects-first)
