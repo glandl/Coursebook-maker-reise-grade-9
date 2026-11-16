@@ -18,7 +18,7 @@ GND_C = "#222"
 V33_C = "#d62828"
 V5_C = "#8a1c7c"
 SIG_C = "#1f6fd1"
-LED_COLORS = {"rot": "#e63946", "gelb": "#f4b400", "grün": "#2a9d4b", "warmweiß": "#f6e7b0"}
+LED_COLORS = {"rot": "#e63946", "gelb": "#f4b400", "grün": "#2a9d4b", "warmweiß": "#f6e7b0", "blau": "#3a6ff7"}
 
 LEFT_PINS = {1: "GP0", 2: "GP1", 3: "GND", 4: "GP2", 5: "GP3", 6: "GP4", 7: "GP5", 8: "GND",
              9: "GP6", 10: "GP7", 11: "GP8", 12: "GP9", 13: "GND", 14: "GP10", 15: "GP11",
@@ -39,6 +39,7 @@ class Bild:
         self.rx = LEFT_SPACE + BOARD_W          # rechter Rand des Boards
         self.max_x = self.rx + 60
         self.used = {}
+        self.extra_unten = 0                    # Platz unter dem Board (Summer)
 
     # --- Grundformen -------------------------------------------------------
     def add(self, s):
@@ -161,12 +162,12 @@ class Bild:
         self.dot(gnd_x, y, GND_C)
         self.text(gnd_x - 14, y + 4, label, 12, "end", "#222", True)
 
-    def gnd_links(self, pins, alle_reihen, gnd_x):
+    def gnd_links(self, pins, alle_reihen, gnd_x, extra_ys=()):
         for p in pins:
             x, y = self.benutze(p, GND_C)
             self.line([(x, y), (gnd_x, y)], GND_C)
             self.dot(gnd_x, y, GND_C)
-        ys = [self.y_links(p) for p in alle_reihen + pins]
+        ys = [self.y_links(p) for p in alle_reihen + pins] + list(extra_ys)
         self.line([(gnd_x, min(ys)), (gnd_x, max(ys))], GND_C, 4)
         self.text(gnd_x, max(ys) + 32, "GND", 11, "middle", GND_C, True)
 
@@ -231,10 +232,83 @@ class Bild:
             self.text(lx, oy + 116, ("links", "Mitte", "rechts")[i], 10, "middle", "#555")
         self.max_x = max(self.max_x, ox + 140)
 
+
+    def summer_unten(self, gnd_x):
+        """Passiver Summer: GP16 (Beinchen 21) → unter dem Board → GND-Schiene links. Liefert die y-Lage."""
+        x, y = self.benutze(21, SIG_C)
+        yb = y + 60
+        self.line([(x, y), (x + 40, y), (x + 40, yb), (self.bx + BOARD_W / 2 + 34, yb)], SIG_C)
+        m = self.bx + BOARD_W / 2
+        x1, x2 = m + 34, m - 34                 # rechts +, links −
+        self.add(f"<line x1='{x1}' y1='{yb - 14}' x2='{x1}' y2='{yb + 14}' stroke='#333' stroke-width='3'/>")
+        self.add(f"<line x1='{x2}' y1='{yb - 14}' x2='{x2}' y2='{yb + 14}' stroke='#333' stroke-width='3'/>")
+        self.add(f"<rect x='{x2 + 5}' y='{yb - 10}' width='{x1 - x2 - 10}' height='20' fill='#ddd' stroke='#333' stroke-width='2'/>")
+        self.text(x1 + 6, yb - 16, "+", 13, "start", "#333", True)
+        self.text(x2 - 6, yb - 16, "−", 13, "end", "#333", True)
+        self.text(m, yb + 32, "Summer (passiv)", 12, "middle", "#222", True)
+        self.line([(x2, yb), (gnd_x, yb)], GND_C)
+        self.dot(gnd_x, yb, GND_C)
+        self.extra_unten = 70
+        return yb
+
+    def servo(self):
+        """SG90: rot an VBUS (40), braun an GND (38), orange an GP20 (Beinchen 26)."""
+        xb = self.rx + 150
+        x40, y40 = self.benutze(40, V5_C)
+        x38, y38 = self.benutze(38, GND_C)
+        x26, y26 = self.benutze(26, SIG_C)
+        y_sig = self.y_rechts(37)
+        self.line([(x40, y40), (xb, y40)], V5_C)
+        self.text(x40 + 14, y40 - 8, "5 V", 11, "start", V5_C, True)
+        self.line([(x38, y38), (xb, y38)], GND_C)
+        self.line([(x26, y26), (self.rx + 90, y26), (self.rx + 90, y_sig), (xb, y_sig)], SIG_C)
+        top, bot = y40 - 26, y_sig + 26
+        self.add(f"<rect x='{xb}' y='{top}' width='130' height='{bot - top}' rx='6' fill='#2457b8' stroke='#163a7a' stroke-width='2'/>")
+        for y, t in ((y40, "rot · 5 V"), (y38, "braun · GND"), (y_sig, "orange · Signal")):
+            self.add(f"<circle cx='{xb}' cy='{y}' r='4' fill='#f2c14e' stroke='#7a5b10'/>")
+            self.text(xb + 10, y + 4, t, 11, "start", "#fff", True)
+        self.add(f"<rect x='{xb + 130}' y='{(top + bot) / 2 - 8}' width='70' height='16' rx='8' fill='#f4f4f4' stroke='#999' stroke-width='2'/>")
+        self.text(xb + 165, (top + bot) / 2 + 28, "Arm", 11, "middle", "#555")
+        self.text(xb + 65, top - 8, "Servo SG90", 12, "middle", "#222", True)
+        self.max_x = max(self.max_x, xb + 220)
+
+    def modul(self, xb, name, farbe, reihen):
+        """Sensor-Modul als Kasten; reihen: [(y, Beschriftung)]."""
+        ys = [y for y, _ in reihen]
+        top, bot = min(ys) - 26, max(ys) + 22
+        self.add(f"<rect x='{xb}' y='{top}' width='130' height='{bot - top}' rx='6' fill='{farbe}' stroke='#111' stroke-width='2'/>")
+        for y, t in reihen:
+            self.add(f"<circle cx='{xb}' cy='{y}' r='4' fill='#f2c14e' stroke='#7a5b10'/>")
+            self.text(xb + 10, y + 4, t, 11, "start", "#fff", True)
+        self.text(xb + 65, top - 8, name, 12, "middle", "#222", True)
+        self.max_x = max(self.max_x, xb + 150)
+
+    def boden_und_regen(self):
+        """Regensensor (AO an GP27, Beinchen 32) und Bodenfeuchte (AOUT an GP26, Beinchen 31), beide an 3V3."""
+        xr = self.rx + 140                      # Regen-Modul
+        xv = xr + 170                           # 3V3-Leitung zum Bodenmodul
+        xs = xv + 40                            # Boden-Modul
+        x36, y36 = self.benutze(36, V33_C)
+        x33, y33 = self.benutze(33, GND_C)
+        x32, y32 = self.benutze(32, SIG_C)
+        x31, y31 = self.benutze(31, SIG_C)
+        x28, y28 = self.benutze(28, GND_C)
+        self.line([(x36, y36), (xr, y36)], V33_C)
+        self.text(x36 + 14, y36 - 8, "3,3 V", 11, "start", V33_C, True)
+        j = self.rx + 90
+        self.dot(j, y36, V33_C)
+        self.line([(j, y36), (j, y36 - 48), (xv, y36 - 48), (xv, y32), (xs, y32)], V33_C)
+        self.line([(x33, y33), (xr, y33)], GND_C)
+        self.line([(x32, y32), (xr, y32)], SIG_C)
+        self.line([(x31, y31), (xs, y31)], SIG_C)
+        self.line([(x28, y28), (xs, y28)], GND_C)
+        self.modul(xr, "Regensensor (Modul)", "#1d4e89", [(y36, "VCC"), (y33, "GND"), (y32, "AO")])
+        self.modul(xs, "Bodenfeuchtesensor", "#333", [(y32, "VCC"), (y31, "AOUT"), (y28, "GND")])
+
     # --- Ausgabe -----------------------------------------------------------
     def svg(self, titel, hinweise):
         breite = max(self.max_x + 20, 900)
-        unten = TOP + 19 * P + 70
+        unten = TOP + 19 * P + 70 + self.extra_unten
         h = unten + 24 * len(hinweise) + 20
         kopf = [f"<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 {breite} {h}' width='{breite}' height='{h}'>",
                 f"<rect width='100%' height='100%' fill='#ffffff'/>",
@@ -254,13 +328,15 @@ STANDARD = [
 
 
 def zeichne(ordner, titel, links, rechts=None, extra=()):
-    """links: Liste von ("led", beinchen, farbe, ohm, label), ("taste", beinchen, label), ("gnd", [beinchen]).
+    """links: Liste von ("led", beinchen, farbe, ohm, label), ("taste", beinchen, label), ("gnd", [beinchen]),
+    ("summer",) für den Summer an GP16 (unter dem Board zur GND-Schiene).
+    rechts: "ldr", "piezo", "tmp36", "pir", "servo", "boden_regen".
 
     Achtung: Beinchen-Nummer, nicht GP-Nummer (GP15 = Beinchen 20).
     """
     b = Bild()
     gnd_x = b.bx - 210
-    reihen, gnd_pins = [], []
+    reihen, gnd_pins, extra_ys = [], [], []
     for teil in links:
         if teil[0] == "led":
             _, pin, farbe, ohm, label = teil
@@ -272,7 +348,9 @@ def zeichne(ordner, titel, links, rechts=None, extra=()):
             reihen.append(pin)
         elif teil[0] == "gnd":
             gnd_pins += teil[1]
-    b.gnd_links(gnd_pins, reihen, gnd_x)
+        elif teil[0] == "summer":
+            extra_ys.append(b.summer_unten(gnd_x))
+    b.gnd_links(gnd_pins, reihen, gnd_x, extra_ys)
     for r in rechts or []:
         if r == "ldr":
             b.spannungsteiler(b.ldr_v, "", lambda x, y1, y2: b.widerstand_v(x, y1, y2, "10 kΩ"), "")
@@ -299,6 +377,10 @@ def zeichne(ordner, titel, links, rechts=None, extra=()):
             b.tmp36()
         elif r == "pir":
             b.pir()
+        elif r == "servo":
+            b.servo()
+        elif r == "boden_regen":
+            b.boden_und_regen()
     b.board()
     (HIER / ordner / "schaltung.svg").write_text(b.svg(titel, STANDARD + list(extra)), encoding="utf-8")
     print("geschrieben:", ordner)
@@ -362,4 +444,73 @@ zeichne("265a-team-08", "Schaltung · Handy-Ein/Aus-Taste", [
     ("taste", 19, "Taste"),
     ("led", 20, "rot", "220 Ω", "LED rot (Display)"),
     ("gnd", [18]),
+])
+
+
+# --- Klasse 265b -------------------------------------------------------------
+
+zeichne("265b-team-01", "Schaltung · Türklingel", [
+    ("taste", 19, "Klingeltaste"),
+    ("led", 20, "gelb", "220 Ω", "LED gelb"),
+    ("gnd", [18]),
+    ("summer",),
+])
+
+zeichne("265b-team-02", "Schaltung · Alarmanlage", [
+    ("taste", 19, "Taste"),
+    ("led", 20, "rot", "220 Ω", "LED rot (scharf)"),
+    ("gnd", [18]),
+    ("summer",),
+], ["pir"], [
+    "Bewegungsmelder: Beschriftung VCC/OUT/GND steht unter der weißen Kuppel.",
+])
+
+zeichne("265b-team-03", "Schaltung · Kühlschranklicht", [
+    ("taste", 15, "Türkontakt (Taste)"),
+    ("taste", 19, "Taste AUS/AUTO"),
+    ("led", 20, "warmweiß", "100 Ω", "LED warmweiß"),
+    ("gnd", [13, 18]),
+])
+
+zeichne("265b-team-04", "Schaltung · Klimawächter", [
+    ("led", 16, "grün", "220 Ω", "LED grün"),
+    ("led", 17, "blau", "100 Ω", "LED blau"),
+    ("taste", 19, "Taste"),
+    ("led", 20, "rot", "220 Ω", "LED rot"),
+    ("gnd", [18]),
+], ["tmp36"], [
+    "TMP36: flache Seite zu euch, Beinchen nach unten. Falsch herum wird er heiß, dann sofort USB abziehen.",
+])
+
+zeichne("265b-team-05", "Schaltung · Bewässerungsanlage", [
+    ("led", 16, "grün", "220 Ω", "LED grün (EIN)"),
+    ("taste", 19, "Taste"),
+    ("led", 20, "blau", "100 Ω", "LED blau (Pumpe)"),
+    ("gnd", [18]),
+], ["boden_regen"], [
+    "Beide Sensoren bekommen 3,3 V vom selben Beinchen 36. Elektronik und Pico trocken halten, nur die Sensorspitzen ins Wasser.",
+])
+
+zeichne("265b-team-06", "Schaltung · Tageslichtlampe", [
+    ("taste", 19, "Taste"),
+    ("led", 20, "warmweiß", "100 Ω", "LED warmweiß"),
+    ("gnd", [18]),
+], ["ldr"], [
+    "Die LED nicht auf den Lichtsensor richten.",
+])
+
+zeichne("265b-team-07", "Schaltung · Nachtlicht", [
+    ("taste", 19, "Taste"),
+    ("led", 20, "warmweiß", "100 Ω", "LED warmweiß"),
+    ("gnd", [18]),
+], ["ldr"], [
+    "Die LED nicht auf den Lichtsensor richten.",
+])
+
+zeichne("265b-team-08", "Schaltung · Futterautomat", [
+    ("taste", 15, "Taste MENGE"),
+    ("taste", 19, "Taste FÜTTERN"),
+    ("gnd", [13, 18]),
+], ["servo"], [
+    "Servo: Startet der Pico neu, sobald sich der Servo bewegt, reicht der USB-Strom nicht. Dann Lehrkraft fragen.",
 ])

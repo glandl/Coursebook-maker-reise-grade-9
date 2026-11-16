@@ -4,6 +4,34 @@ Companion to `PLAN.md`. `PLAN.md` holds the settled design; this file tracks wha
 
 ---
 
+## 2026-11-16 · Baupläne for class 265b (8 teams)
+
+**Goal:** a `BAUPLAN.md` + `schaltung.svg` for each 265b team, in the same format as the 265a set, from the teacher-supplied `ANFORDERUNGEN.md`.
+
+**Teacher decisions taken in this session**
+
+- Extra parts are available for 5b: **blue LED, servo SG90, soil-moisture sensor, rain sensor, potentiometer**. No pump: team 05's pump is a blue LED.
+- **Team 01** handed in nothing (`ANFORDERUNGEN.md` only says so). The Bauplan says this up front and gives two invented, very basic stories for a **doorbell** (button → two-tone gong + LED for 3 s, no re-trigger while ringing). It's the simplest Bauplan in the set: 2 states, 10 cards, most code given.
+- **Team 03** fridge light: a **button acts as the door contact** (pressed = door closed) instead of their LDR story, a second button for AUS/AUTOMATIK.
+- **Team 06** wrote three unrelated ideas. The teacher picked the **daylight lamp** (LDR + button override). The temperature light and the charger reminder survive only as "Wenn ihr schneller seid".
+
+**Decisions I took myself (open to review)**
+
+- **Team 07:** their US1/US2 copy the night-light example from week 2 word for word, and week 5 has the full code. Their Kann story US3 (fade out, PWM) is **promoted to Muss** so they have to build something themselves. Easy to revert.
+- **Team 08:** there is no scale, so the amount of food comes from how long the flap stays open (grams per second measured once with a kitchen scale, K3). The tolerance is widened from ±5 g to **±10 g**. Feeding time uses the Pico RTC set by Thonny (same approach as 265a-team-03). A `gefuettert_um` guard makes it feed only once per minute. Students test with rice.
+- **Team 05:** a second threshold (start below 30 %, stop at 40 %) for hysteresis. US3's "button within easy reach" can't be checked on a breadboard, so it was replaced by a green "Anlage EIN" LED.
+- **Team 04:** colour comes from a pure function `lampen(zustand, temperatur)`, and the automaton has only EIN/AUS. Hysteresis is offered as a Kann task.
+
+**Pins (Kurs-Verkabelung, unchanged):** buzzer GP16, PIR GP17, servo GP20, soil sensor GP26, rain sensor AO GP27, 2nd/3rd LED GP13/GP12, 2nd button GP11. Blue and white LEDs use 100 Ω.
+
+**`schaltplan.py` extended:** blue LED colour, `("summer",)` in the left-hand list (buzzer routed under the board to the GND rail, so it doesn't cross the PIR lines), plus `"servo"` and `"boden_regen"` (two 3-pin modules sharing 3V3 pin 36) on the right. The 265a SVGs regenerate byte-identical.
+
+**Verified:** for each team, `logik.py` assembled from the Lösung blocks passes that team's `test_logik.py` (6–10 tests each, all green). All 8 SVGs were rendered and checked by eye.
+
+**Open:** the teacher reviews each Bauplan with the checklist in `bauplaene/README.md`. The demand table in that README is still empty for both classes.
+
+---
+
 ## 2026-09-23 · Teacher lesson plan week 2 (issue #7)
 
 **Goal:** the Verlaufsplan for the P1 week 2 double lesson (team, requirements, Kanban), DE + EN, matching the existing student page.
